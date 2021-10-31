@@ -59,7 +59,7 @@ alert("Üye başarıyla silindi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Üye Listesi</h4>
+							<h4 class="page-title"><?php echo $dil['uye-listesi-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -70,7 +70,7 @@ alert("Üye başarıyla silindi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Görüntüle</a>
+									<a href="#"><?php echo $dil['goruntule-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -90,7 +90,7 @@ alert("Üye başarıyla silindi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Üye Listesi</b></h2>
+                        <h2><b><?php echo $dil['uye-listesi-metin'] ?></b></h2>
                         </div>
                         
                         
@@ -100,11 +100,11 @@ alert("Üye başarıyla silindi!");
 												<thead>
 													<tr>
 														<th>#</th>
-														<th>İsim Soyisim</th>
-                                                        <th>E-Posta Adresi</th>
-                                                        <th>Referans</th>
-                                                        <th>Bakiye (ARH)</th>
-                                                        <th>Seçenekler</th>
+														<th><?php echo $dil['isim-soyisim'] ?></th>
+                                                        <th><?php echo $dil['eposta-adresi'] ?></th>
+                                                        <th><?php echo $dil['referans-kullanici'] ?></th>
+                                                        <th><?php echo $dil['bakiye'] ?></th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
                                                         
 														
 														

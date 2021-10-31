@@ -59,7 +59,7 @@ alert("Yönetici başarıyla silindi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Yönetici Listesi</h4>
+							<h4 class="page-title"><?php echo $dil['yonetici-listesi-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -70,7 +70,7 @@ alert("Yönetici başarıyla silindi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Görüntüle</a>
+									<a href="#"><?php echo $dil['goruntule-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -90,7 +90,7 @@ alert("Yönetici başarıyla silindi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Yönetici Listesi</b></h2>
+                        <h2><b><?php echo $dil['yonetici-listesi-metin'] ?></b></h2>
                         </div>
                         
                         
@@ -100,10 +100,10 @@ alert("Yönetici başarıyla silindi!");
 												<thead>
 													<tr>
 														<th>#</th>
-														<th>İsim Soyisim</th>
-                                                        <th>E-Posta Adresi</th>
-                                                        <th>Telefon Numarası</th>
-                                                        <th>Seçenekler</th>
+														<th><?php echo $dil['isim-soyisim'] ?></th>
+                                                        <th><?php echo $dil['eposta-adresi'] ?></th>
+                                                        <th><?php echo $dil['telefon-numarasi-metin'] ?></th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
                                                         
 														
 														

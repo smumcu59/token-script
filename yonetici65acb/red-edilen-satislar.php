@@ -52,7 +52,7 @@ alert("Cüzdan başarıyla eklendi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Red Edilen Satışlar</h4>
+							<h4 class="page-title"><?php echo $dil['red-edilen-satislar-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -63,7 +63,7 @@ alert("Cüzdan başarıyla eklendi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Görüntüle</a>
+									<a href="#"><?php echo $dil['goruntule-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -82,7 +82,7 @@ alert("Cüzdan başarıyla eklendi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Red Edilen Satışlar</b></h2>
+                        <h2><b><?php echo $dil['red-edilen-satislar-metin'] ?></b></h2>
                         </div>
                         
                         
@@ -92,13 +92,13 @@ alert("Cüzdan başarıyla eklendi!");
 												<thead>
 													<tr>
 														<th>#</th>
-														<th>TxID (İşlem) Numarası</th>
-                                                        <th>Tarih/Saat</th>
-                                                        <th>Ödeme Sağlanan Cüzdan</th>
-                                                        <th>Yatırılacak Token</th>
-                                                        <th>Ödenen Tutar</th>
-														<th>İşlem Türü</th>
-                                                        <th>İşlem Durumu</th>
+														<th><?php echo $dil['txid-metin'] ?></th>
+                                                        <th><?php echo $dil['tarih-saat'] ?></th>
+                                                        <th><?php echo $dil['odeme-saglanan-cuzdan'] ?></th>
+                                                        <th><?php echo $dil['yatirilacak_token'] ?></th>
+                                                        <th><?php echo $dil['odenen-tutar-metin'] ?></th>
+														<th><?php echo $dil['islem-turu-metin'] ?></th>
+                                                        <th><?php echo $dil['islem-durumu-metin'] ?></th>
 														
 														
 														
@@ -186,7 +186,7 @@ alert("Cüzdan başarıyla eklendi!");
 											
 											<div class="col-md-3 col-lg-3">
                                                 <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 

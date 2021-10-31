@@ -51,7 +51,7 @@ alert("Token Ayarları Başarıyla Güncellendi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Token Ayarları</h4>
+							<h4 class="page-title"><?php echo $dil['token-ayarlari-baslik'] ?></h4>
 							<ul class="breadcrumbs">
                             <form action="islemler/islem.php" method="POST">
 								<li class="nav-home">
@@ -63,7 +63,7 @@ alert("Token Ayarları Başarıyla Güncellendi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Yönetim İşlemi</a>
+									<a href="#"><?php echo $dil['yonetim-islemi-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -83,25 +83,25 @@ alert("Token Ayarları Başarıyla Güncellendi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Token Ayarları</b></h2>
+                        <h2><b><?php echo $dil['token-ayarlari-baslik'] ?></b></h2>
                         </div>
 
                         <div class="col-md-12 col-lg-12">
 
                         <div class="row">
                         <div class="col-md-4 col-lg-4">
-                        <label class="from tarih_saat">Güncel Token Ön Satış Sınırı (ARH)</label>
+                        <label class="from tarih_saat"><?php echo $dil['on-satis-token-siniri'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="sinir" required value="<?php echo strip_tags($on_satis_siniri) ?>">
                         <br>
                         
                         </div>
                         <div class="col-md-4 col-lg-4">
-                        <label class="from tarih_saat">Cüzdan Kimliği</label>
+                        <label class="from tarih_saat"><?php echo $dil['cuzdan-kimligi'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="cuzdan_kimligi" required value="<?php echo strip_tags($cuzdan_kimligi) ?>">
                         
                         </div>
                         <div class="col-md-4 col-lg-4">
-                        <label class="from tarih_saat">Referans Kazanç Oranı (%)</label>
+                        <label class="from tarih_saat"><?php echo $dil['referans-kazanc-orani'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="kazanc_orani" required value="<?php echo strip_tags($referans_orani) ?>">
                         <br>
                         
@@ -109,7 +109,7 @@ alert("Token Ayarları Başarıyla Güncellendi!");
                         
                         <div class="col-md-2 col-lg-2">
                         <br> <br>
-                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="ayarlari-guncelle">Ayarları Güncelle</button>
+                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="ayarlari-guncelle"><?php echo $dil['ayarlari-guncelle-buton'] ?></button>
                                                 
 
                         
@@ -118,7 +118,7 @@ alert("Token Ayarları Başarıyla Güncellendi!");
                         
                         <div class="col-md-3 col-lg-3">
                                                 <br> <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 
@@ -126,7 +126,7 @@ alert("Token Ayarları Başarıyla Güncellendi!");
                         </form>
                         <div class="col-md-12 col-lg-12">
                         <br>
-                        <h2><label><turuncu>BİLGİ: </turuncu> Gösterimi yapılan güncel token satış sınırı, sizin token ayarları sayfasına girdiğiniz andan itibaren geçerli olan token sınırıdır. Token ayarlarını güncellerken token ile ilgili devam eden bir işlem yapmamanız tavsiye edilir.</label></h2>
+                        <h2><label><turuncu><?php echo $dil['bilgi-baslik'] ?>: </turuncu> <?php echo $dil['bilgi-sinir-aciklamasi'] ?></label></h2>
                         </div>
                         
                         </div>

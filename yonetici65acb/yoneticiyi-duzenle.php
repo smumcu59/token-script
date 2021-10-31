@@ -51,7 +51,7 @@ alert("Cüzdan başarıyla eklendi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Yöneticiyi Düzenle</h4>
+							<h4 class="page-title"><?php echo $dil['yoneticiyi-duzenle-metin'] ?></h4>
 							<ul class="breadcrumbs">
                             <form action="islemler/islem.php" method="POST">
 								<li class="nav-home">
@@ -63,7 +63,7 @@ alert("Cüzdan başarıyla eklendi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Düzenleme İşlemi</a>
+									<a href="#"><?php echo $dil['duzenleme-islemi-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -83,7 +83,7 @@ alert("Cüzdan başarıyla eklendi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Yöneticiyi Düzenle</b></h2>
+                        <h2><b><?php echo $dil['yoneticiyi-duzenle-metin'] ?></b></h2>
                         </div>
 
                         <div class="col-md-12 col-lg-12">
@@ -91,31 +91,31 @@ alert("Cüzdan başarıyla eklendi!");
                         <div class="row">
                         <div class="col-md-4 col-lg-4">
                         <br>
-                        <label class="from tarih_saat">Yönetici İsim Soyisim</label>
+                        <label class="from tarih_saat"><?php echo $dil['yonetici-isim-soyisim-metin'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="isim_soyisim" required value="<?php echo strip_tags($yonetici_isim_soyisim) ?>">
                         </div>
                         <div class="col-md-4 col-lg-4">
                         <br>
-                        <label class="from tarih_saat">Yönetici E-Posta Adresi</label>
+                        <label class="from tarih_saat"><?php echo $dil['yonetici-eposta-metin'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="e_posta" required value="<?php echo strip_tags($yonetici_eposta) ?>">
                         
                         </div>
                         <div class="col-md-4 col-lg-4">
                         <br>
-                        <label class="from tarih_saat">Yönetici Telefon Numarası</label>
+                        <label class="from tarih_saat"><?php echo $dil['yonetici-telefon-metin'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="telefon" required value="<?php echo strip_tags($yonetici_telefon_numarasi) ?>">
                         
                         </div>
                         <div class="col-md-2 col-lg-2">
                         <br> <br>
-                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="yoneticiyi-guncelle">Yöneticiyi Güncelle</button>
+                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="yoneticiyi-guncelle"><?php echo $dil['yoneticiyi-guncelle-buton'] ?></button>
                                                 
 
 
                         </div>
                         <div class="col-md-3 col-lg-3">
                                                 <br> <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="yonetici-listesine-geri-don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="yonetici-listesine-geri-don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 

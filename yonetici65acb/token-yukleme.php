@@ -62,7 +62,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title"><?php echo strip_tags($uye_adi)." isimli üyeye token yüklüyorsun" ?></h4>
+							<h4 class="page-title"><?php echo strip_tags($uye_adi)." ".$dil['token-yukleme-head-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -73,7 +73,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Token Yükleme İşlemi</a>
+									<a href="#"><?php echo $dil['token-yukleme-islemi-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -92,7 +92,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Yükleme İşlemi</b></h2>
+                        <h2><b><?php echo $dil['yukleme-islemi-metin'] ?></b></h2>
                         </div>
                         
                         <div class="col-md-12 col-lg-12">
@@ -100,7 +100,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                             <br>
                             <div class="row">
                             <div class="col-md-6 col-lg-6">
-                            <label class="from cuzdanAdi">Yüklenecek Token (ARH)</label>
+                            <label class="from cuzdanAdi"><?php echo $dil['yuklenecek-token-metin'] ?></label>
                                 <input type="number" class="form-control form-control" name="yuklenecek_token" placeholder="Yükleyeceğiniz token miktarını yazınız." >
                                                                
 
@@ -108,12 +108,12 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                            
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-success" name="tokeni-yukle" type="submit">Tokeni Yükle</button>
+                            <button class="btn btn-success" name="tokeni-yukle" type="submit"><?php echo $dil['tokeni-yukle-buton'] ?></button>
 
                             </div>
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-danger" name="anasayfaya-don" type="submit">Anasayfaya Dön</button>
+                            <button class="btn btn-danger" name="anasayfaya-don" type="submit"><?php echo $dil['anasayfaya-don-buton'] ?></button>
 
                             </div>
                             </div>

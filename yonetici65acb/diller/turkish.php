@@ -178,11 +178,102 @@ $dil['paket-2-kazanc-orani'] = "Paket 2 Ek Kazanç Oranı";
 $dil['paket-3-kazanc-orani'] = "Paket 3 Ek Kazanç Oranı";
 $dil['paketleri-guncelle-buton'] = "Paketleri Güncelle";
 
- 
+##
+
+## Parolayı değiştir
+
+$dil['parolayi-degistir-metni'] = "Parolayı Değiştir";
+$dil['parola-degistirme-islemi'] = "Parola Değiştirme İşlemi";
+$dil['mevcut-parolaniz'] = "Mevcut Parolanız";
+$dil['mevcut-parolanizi-giriniz'] = "Mevcut Parolanızı Giriniz...";
+$dil['yeni-parolaniz'] = "Yeni Parolanız";
+$dil['yeni-parolanizi-giriniz'] = "Yeni Parolanızı Giriniz...";
+$dil['yeni-parola-onayi'] = "Yeni Parola Onayı";
+$dil['yeni-parola-onayi-tekrar'] = "Yeni Parolanızı Tekrar Giriniz...";
+$dil['parolayi-guncelle-buton'] = "Parolayı Güncelle";
+
+##
+
+## Red edilen satışlar
+
+$dil['islem-turu-metin'] = "İşlem Türü";
+
+##
+
+## Takvim
+
+$dil['takvim-metin'] = "Takvim";
+
+$dil['paz'] = "Paz";
+$dil['pzt'] = "Pzt";
+$dil['sal'] = "Sal";
+$dil['car'] = "Çar";
+$dil['per'] = "Per";
+$dil['cum'] = "Cum";
+$dil['cmt'] = "Cmt";
 
 
 ##
 
+## Token Ayarları
+
+$dil['token-ayarlari-baslik'] = "Token Ayarları";
+$dil['on-satis-token-siniri'] = "Güncel Ön Satış Token Sınırı";
+$dil['referans-kazanc-orani'] = "Referans Kazanç Oranı (%)";
+$dil['ayarlari-guncelle-buton'] = "Ayarları Güncelle";
+$dil['bilgi-sinir-aciklamasi'] = "Gösterimi yapılan güncel token satış sınırı, sizin token ayarları sayfasına girdiğiniz andan itibaren geçerli olan token sınırıdır. Token ayarlarını güncellerken token ile ilgili devam eden bir işlem yapmamanız tavsiye edilir.";
+
+##
+
+## Token Yükleme
+
+$dil['token-yukleme-head-metin'] = "isimli üyeye token yüklüyorsun";
+
+##
+
+## Üyeyi düzenle
+
+$dil['uyeyi-duzenle-baslik'] = "Üyeyi Düzenle";
+$dil['uye-eposta-adresi'] = "Üye Elektronik Posta Adresi";
+$dil['uyeyi-guncelle-buton'] = "Üyeyi Güncelle";
+$dil['uye-isim-soyisim-metin'] = "Üye İsim Soyisim";
+
+##
+
+## Üye Listesi
+
+$dil['isim-soyisim'] = "İsim Soyisim";
+$dil['eposta-adresi'] = "E-Posta Adresi";
+$dil['referans-kullanici'] = "Referans";
+$dil['bakiye'] = "Bakiye";
+
+##
+
+## Yönetici ekle
+
+$dil['yonetici-ekle-baslik'] = "Yönetici Ekle";
+$dil['ekleme-islemi-metin'] = "Ekleme İşlemi";
+$dil['yonetici-isim-soyisim-metin'] = "Yönetici İsim Soyisim";
+$dil['yonetici-eposta-metin'] = "Yönetici E-Posta Adresi";
+$dil['yonetici-telefon-metin'] = "Yönetici Telefon Numarası";
+$dil['yonetici-parolasi-metin'] = "Yönetici Parolası";
+$dil['yoneticiyi-ekle-buton'] = "Yöneticiyi Ekle";
+
+
+##
+
+## Yönetici Listesi
+
+$dil['telefon-numarasi-metin'] = "Telefon Numarası";
+
+##
+
+## Yöneticiyi Düzenle
+
+$dil['yoneticiyi-duzenle-metin'] = "Yöneticiyi Düzenle";
+$dil['yoneticiyi-guncelle-buton'] = "Yöneticiyi Güncelle";
+
+##
 
 
 

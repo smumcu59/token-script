@@ -66,7 +66,7 @@ if(isset($_SESSION['parola-veritabani-ile-uyusmuyor'])){
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Parolayı Değiştir</h4>
+							<h4 class="page-title"><?php echo $dil['parolayi-degistir-metni'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -77,7 +77,7 @@ if(isset($_SESSION['parola-veritabani-ile-uyusmuyor'])){
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Parola Değiştirme İşlemi</a>
+									<a href="#"><?php echo $dil['parola-degistirme-islemi'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -96,7 +96,7 @@ if(isset($_SESSION['parola-veritabani-ile-uyusmuyor'])){
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Parola Değiştir</b></h2>
+                        <h2><b><?php echo $dil['parolayi-degistir-metni'] ?></b></h2>
                         </div>
                         
                         <div class="col-md-12 col-lg-12">
@@ -104,29 +104,29 @@ if(isset($_SESSION['parola-veritabani-ile-uyusmuyor'])){
                             <br>
                             <div class="row">
                             <div class="col-md-4 col-lg-4">
-                            <label class="from cuzdanAdi">Mevcut Parolanız</label>
-                                <input type="password" class="form-control form-control" name="mevcut_parola" placeholder="Mevcut parolanızı giriniz.">
+                            <label class="from cuzdanAdi"><?php echo $dil['mevcut-parolaniz'] ?></label>
+                                <input type="password" class="form-control form-control" name="mevcut_parola" placeholder="<?php echo $dil['mevcut-parolanizi-giriniz'] ?>">
                                                                
 
                             </div>
                             <div class="col-md-4 col-lg-4">
-                                <label class="from cuzdanAdi">Yeni Parolanız</label>
-                                <input type="password" class="form-control form-control" name="yeni_parola" placeholder="Yeni parolanızı giriniz. ">
+                                <label class="from cuzdanAdi"><?php echo $dil['yeni-parolaniz'] ?></label>
+                                <input type="password" class="form-control form-control" name="yeni_parola" placeholder="<?php echo $dil['yeni-parolanizi-giriniz'] ?> ">
 
                             </div>
                             <div class="col-md-4 col-lg-4">
-                                <label class="from cuzdanAdi">Yeni Parola Onayı</label>
-                                <input type="password" class="form-control form-control" name="yeni_parola_onay" placeholder="Yeni parolanızı tekrar giriniz. " >
+                                <label class="from cuzdanAdi"><?php echo $dil['yeni-parola-onayi'] ?></label>
+                                <input type="password" class="form-control form-control" name="yeni_parola_onay" placeholder="<?php echo $dil['yeni-parola-onayi-tekrar'] ?> " >
 
                             </div>
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-warning" name="parolayi-guncelle" type="submit">Parolayı Güncelle</button>
+                            <button class="btn btn-warning" name="parolayi-guncelle" type="submit"><?php echo $dil['parolayi-guncelle-buton'] ?></button>
 
                             </div>
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-danger" name="anasayfaya-don" type="submit">Anasayfaya Dön</button>
+                            <button class="btn btn-danger" name="anasayfaya-don" type="submit"><?php echo $dil['anasayfaya-don-buton'] ?></button>
 
                             </div>
                             </div>
