@@ -23,7 +23,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Archive Token - Müşteri Kaydı</title>
+    <title><?php echo $dil['kayit-ol-baslik'] ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -48,18 +48,18 @@
                     <div class="col-lg-6">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4"><b>Archive Token Müşteri Kaydı</b></h1>
+                                <h1 class="h4 text-gray-900 mb-4"><b><?php echo $dil['kayit-ol-baslik'] ?></b></h1>
                             </div>
                             <form class="user" action="portal/islemler/islem.php" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                     
                                         <input type="text" class="form-control form-control-user" id="isim" name="kullanici_isim_soyisim"
-                                            placeholder="İsminizi ve Soyisminizi Giriniz..." required>
+                                            placeholder="<?php echo $dil['kayit-ol-isim-soyisim'] ?>." required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user" id="parolaa" name="parola"
-                                            placeholder="Parolanızı Giriniz..." required>
+                                            placeholder="<?php echo $dil['parola-girin'] ?>" required>
                                     
                                     </div>
                                     
@@ -69,21 +69,21 @@
                                 
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="epp" name="eposta"
-                                        placeholder="E-Posta Adresinizi Giriniz..." required>
+                                        placeholder="<?php echo $dil['e-posta-girin'] ?>" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="refemail" class="form-control form-control-user" id="epp" name="referans"
-                                        placeholder="Referanslı Kullanıcı Mail Adresini Giriniz... (İsteğe Bağlı Alan)">
+                                        placeholder="<?php echo $dil['referans-kullanici-mail'] ?>">
                                 </div>
 
                                 
-                                <input type="submit" class="btn btn-danger btn-user btn-block" name="kayit-ol" value="Sisteme Kayıt Ol">
+                                <input type="submit" class="btn btn-danger btn-user btn-block" name="kayit-ol" value="<?php echo $dil['kayit-ol-buton'] ?>">
                                 <hr>
                                 <div class="text-center">
-                                <a class="small" href="parolami-unuttum">Parolamı unuttum!</a>
+                                <a class="small" href="parolami-unuttum"><?php echo $dil['portal-parolami-unuttum'] ?></a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="giris-yap">Zaten bir hesabın mı var? Giriş yap!</a>
+                                <a class="small" href="giris-yap"><?php echo $dil['zaten-bir-hesabin-mi-var'] ?></a>
                             </div>
                                 </div>
                                 

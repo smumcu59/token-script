@@ -10,6 +10,16 @@ $dil['kayit-ol'] = "Kayıt Ol";
 
 ##
 
+## Kayıt ol ekranı
+
+$dil['kayit-ol-baslik'] = "Archive Token - Müşteri Kaydı";
+$dil['kayit-ol-isim-soyisim'] = "İsminizi ve Soyisminizi giriniz...";
+$dil['referans-kullanici-mail'] = "Referanslı kullanıcı mail adresini giriniz...";
+$dil['kayit-ol-buton'] = "Sisteme kayıt ol";
+$dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yap!";
+
+##
+
 
 ## Müşteri paneli 
 
