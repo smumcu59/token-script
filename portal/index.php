@@ -353,7 +353,7 @@ siyah
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i> % <?php echo strip_tags($paket_kazanci_1)." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-arh-satin-al'] ?></li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
                     
@@ -370,7 +370,7 @@ siyah
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-arh-satin-al'] ?></li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
                     
@@ -387,7 +387,7 @@ siyah
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-arh-satin-al'] ?></li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
                     

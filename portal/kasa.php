@@ -114,15 +114,15 @@ $result = mysqli_query($connect, $query);
           <strong>$<?php echo strip_tags($toplam_tutar) ?></strong>
         </li>
         <li class="list-group-item d-flex justify-content-between">
-          <span><?php echo $dil['hediyesiz-toplam-arh'] ?> :</span>
+          <span><?php echo $dil['hediyesiz-toplam-token'] ?> :</span>
           <strong><?php echo strip_tags($hediye_haric_tutar) ?> ARH</strong>
         </li>
         <li class="list-group-item d-flex justify-content-between">
-          <span><?php echo $dil['hediye-edilen-toplam-arh'] ?> :</span>
+          <span><?php echo $dil['hediye-edilen-toplam-token'] ?> :</span>
           <strong><?php echo strip_tags($hediyeli_tutar) ?> ARH</strong>
         </li>
         <li class="list-group-item d-flex justify-content-between">
-          <span><?php echo $dil['hesaba-yatacak-toplam-arh'] ?> :</span>
+          <span><?php echo $dil['hesaba-yatacak-toplam-token'] ?> :</span>
           <strong><?php echo strip_tags($toplam_token) ?> ARH</strong>
         </li>
       </ul>
