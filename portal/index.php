@@ -310,7 +310,7 @@ siyah
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title"><?php echo $dil['archive-token-satin-al'] ?></h4>
+							<h4 class="page-title"><?php echo $dil['token-satin-al'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
