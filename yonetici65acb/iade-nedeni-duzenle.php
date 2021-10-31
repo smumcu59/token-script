@@ -46,7 +46,7 @@ alert("Yönetici Başarıyla Eklendi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">İade Nedeni Düzenle</h4>
+							<h4 class="page-title"><?php echo $dil['iade-nedeni-duzenle-baslik'] ?></h4>
 							<ul class="breadcrumbs">
                             <form action="islemler/islem.php" method="POST">
 								<li class="nav-home">
@@ -58,7 +58,7 @@ alert("Yönetici Başarıyla Eklendi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Düzenleme İşlemi</a>
+									<a href="#"><?php echo $dil['duzenleme-islemi-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -78,7 +78,7 @@ alert("Yönetici Başarıyla Eklendi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>İade Nedeni Düzenle</b></h2>
+                        <h2><b><?php echo $dil['iade-nedeni-duzenle-baslik'] ?></b></h2>
                         </div>
 
                         <div class="col-md-12 col-lg-12">
@@ -86,20 +86,20 @@ alert("Yönetici Başarıyla Eklendi!");
                         <div class="row">
                         <div class="col-md-6 col-lg-6">
                         <br>
-                        <label class="from tarih_saat">İade Nedeni</label>
+                        <label class="from tarih_saat"><?php echo $dil['iade-nedeni-metin'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="iade_nedeni" required value="<?php echo strip_tags($iade_nedeni) ?>">
                         </div>
                         
                         <div class="col-md-2 col-lg-2">
                         <br> <br>
-                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="iade-nedenini-guncelle">İade Nedenini Güncelle</button>
+                            <button type="submit" class="btn btn-secondary btn-warning  btn-stiped" type="button" name="iade-nedenini-guncelle"><?php echo $dil['iade-nedenini-guncelle'] ?></button>
                                                 
 
 
                         </div>
                         <div class="col-md-3 col-lg-3">
                                                 <br> <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="iade_nedenlerine_don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="iade_nedenlerine_don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 

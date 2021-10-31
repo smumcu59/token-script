@@ -62,7 +62,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title"><?php echo "İade İşlemi" ?></h4>
+							<h4 class="page-title"><?php echo $dil['iade-islemi-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -73,7 +73,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">İşlem</a>
+									<a href="#"><?php echo $dil['islem-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -92,7 +92,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>İade İşlemleri</b></h2>
+                        <h2><b><?php echo $dil['iade-islemleri-metin'] ?></b></h2>
                         </div>
                         
                         <div class="col-md-12 col-lg-12">
@@ -100,7 +100,7 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                             <br>
                             <div class="row">
                             <div class="col-md-6 col-lg-6">
-                            <label class="from cuzdanAdi">Red Sebebinizi Giriniz</label>
+                            <label class="from cuzdanAdi"><?php echo $dil['red-sebebinizi-giriniz-metin'] ?></label>
                                 <textarea class="form-control form-control" name="red-sebebi"></textarea>
                                                                
 
@@ -108,12 +108,12 @@ if(isset($_SESSION['cuzdan-basariyla-devre-disi-birakildi'] )){
                            
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-success" name="red-islemini-gerceklestir" type="submit">Devam Et</button>
+                            <button class="btn btn-success" name="red-islemini-gerceklestir" type="submit"><?php echo $dil['devam-et-buton'] ?></button>
 
                             </div>
                             <div class="col-md-2 col-lg-2">
                                 <br>
-                            <button class="btn btn-danger" name="anasayfaya-don" type="submit">Anasayfaya Dön</button>
+                            <button class="btn btn-danger" name="anasayfaya-don" type="submit"><?php echo $dil['anasayfaya-don-buton'] ?></button>
 
                             </div>
                             </div>

@@ -310,7 +310,7 @@ siyah
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Paket Önizleme Ekranı</h4>
+							<h4 class="page-title"><?php echo $dil['paket-onizleme-ekrani'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -321,7 +321,7 @@ siyah
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Önizleme</a>
+									<a href="#"><?php echo $dil['onizleme-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -337,7 +337,7 @@ siyah
 								<div class="card">
 									
 									<div class="card-body">
-                                        <h2>Paket Önizleme Ekranı</h2> <br> <br>
+                                        <h2><?php echo $dil['paket-onizleme-ekrani'] ?></h2> <br> <br>
 										<div class="row justify-content-center align-items-center">
                        
 									<div class="row">
@@ -347,51 +347,51 @@ siyah
             <div class="pricing-table-header">
             
                 <h4><strong><?php echo $paket_adi_1 ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
             <div class="price"><strong><?php echo $token_degeri_1 ?></strong> ARH + % <?php echo $paket_kazanci_1 ?> </div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i> % <?php echo $paket_kazanci_1." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i>İstediğin kadar ARH satın al!</li>
-                    <li><i class="fa fa-envelope"></i> 7 Gün 24 Saat Destek Al!</li>
-                    <li class="not-avail"><i class="fa fa-backspace"></i> Teknik arızalara karşı iade politikası.</li>
+                    <li><i class="fa fa-donate"></i> % <?php echo $paket_kazanci_1." ".$dil['fazladan-token-kazanin'] ?></li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
+                    <li><i class="fa fa-envelope"></i> <?php echo $dil['her-zaman-destek'] ?></li>
+                    <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-ariza-iade-politikasi'] ?></li>
                     
-                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_1 ?>"> <input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> ADET <center> <h3> <?php echo "$ ".$paket_fiyati_1 ?> </h3> </center></b></siyah> <br> <button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al">Satın Al</button> </form></div>
+                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_1 ?>"> <input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> <?php echo $dil['adet-metin'] ?> <center> <h3> <?php echo "$ ".$paket_fiyati_1 ?> </h3> </center></b></siyah> <br> <button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al"><?php echo $dil['satin-al-metin'] ?></button> </form></div>
         </div>
     </div>
     <div class="col-md-4 col-sm-6">
         <div class="pricing-table-3 premium">
             <div class="pricing-table-header">
                 <h4><strong><?php echo $paket_adi_2 ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
             <div class="price"><strong><?php echo $token_degeri_2 ?></strong> ARH + % <?php echo $paket_kazanci_2?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i>İstediğin kadar ARH satın al!</li>
-                    <li><i class="fa fa-envelope"></i> 7 Gün 24 Saat Destek Al!</li>
-                    <li class="not-avail"><i class="fa fa-backspace"></i> Teknik arızalara karşı iade politikası.</li>
+                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." ".$dil['fazladan-token-kazanin']  ?></li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
+                    <li><i class="fa fa-envelope"></i> <?php echo $dil['her-zaman-destek'] ?></li>
+                    <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-ariza-iade-politikasi'] ?></li>
                     
-                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_2 ?>"><input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> ADET <center> <h3> <?php echo "$ ".$paket_fiyati_2 ?> </h3> </center></b></siyah><br><button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al">Satın Al</button></form></div>
+                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_2 ?>"><input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> <?php echo $dil['adet-metin'] ?> <center> <h3> <?php echo "$ ".$paket_fiyati_2 ?> </h3> </center></b></siyah><br><button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al"><?php echo $dil['satin-al-metin'] ?></button></form></div>
         </div>
     </div>
     <div class="col-md-4 col-sm-12">
         <div class="pricing-table-3 business">
             <div class="pricing-table-header">
                 <h4><strong><?php echo $paket_adi_3 ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
             <div class="price"><strong><?php echo $token_degeri_3 ?></strong> ARH + % <?php echo $paket_kazanci_3 ?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." fazladan ARH hediye!" ?></li>
-                    <li><i class="fa fa-retweet"></i>İstediğin kadar ARH satın al!</li>
-                    <li><i class="fa fa-envelope"></i> 7 Gün 24 Saat Destek Al!</li>
-                    <li class="not-avail"><i class="fa fa-backspace"></i> Teknik arızalara karşı iade politikası.</li>
+                    <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
+                    <li><i class="fa fa-envelope"></i> <?php echo $dil['her-zaman-destek'] ?></li>
+                    <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-ariza-iade-politikasi'] ?></li>
                     
-                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_3 ?>"><input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> ADET <br> <center> <h3> <?php echo "$ ".$paket_fiyati_3 ?> </h3> </center></b></siyah><br><button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al">Satın Al</button></form></div>
+                </ul><form action="#" method="POST"><input type="hidden" name="kimlik" value="<?php echo $paket_kimligi_3 ?>"><input type="number" id="ortala" name="adet" class="form-control form-control" placeholder="örn: 2" value="1" minlength="1"><siyah><b> <?php echo $dil['adet-metin'] ?> <br> <center> <h3> <?php echo "$ ".$paket_fiyati_3 ?> </h3> </center></b></siyah><br><button type="submit" class="btn btn-secondary btn-primary btn-stiped" type="button" name="satin-al"><?php echo $dil['satin-al-metin'] ?></button></form></div>
         </div>
     </div>
 									</div>

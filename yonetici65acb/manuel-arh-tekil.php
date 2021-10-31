@@ -59,7 +59,7 @@ alert("Talep edilen token ön satış için tanımlanan değerden fazla. Bu sebe
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Üye Seçin</h4>
+							<h4 class="page-title"><?php echo $dil['uye-secimi-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -70,7 +70,7 @@ alert("Talep edilen token ön satış için tanımlanan değerden fazla. Bu sebe
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Seçim Yapın</a>
+									<a href="#"><?php echo $dil['secim-yapin-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -90,7 +90,7 @@ alert("Talep edilen token ön satış için tanımlanan değerden fazla. Bu sebe
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Üye Seçimi</b></h2>
+                        <h2><b><?php echo $dil['uye-secimi-metin'] ?></b></h2>
                         </div>
                         
                         
@@ -100,9 +100,9 @@ alert("Talep edilen token ön satış için tanımlanan değerden fazla. Bu sebe
 												<thead>
 													<tr>
 														
-														<th>Üye Adı Soyadı</th>
+														<th><?php echo $dil['uye-isim-soyisim'] ?></th>
                                                         
-                                                        <th>Seçenekler</th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
                                                         
                                                         
 														

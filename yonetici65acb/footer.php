@@ -1,13 +1,13 @@
 
 		</div>
-		
+	<?php include 'diller/turkish.php'; ?>	
 		<!-- Custom template | don't include it in your project! -->
 		<div class="custom-template">
-			<div class="title">Ayarlar</div>
+			<div class="title"><?php echo $dil['ayarlar-metin'] ?></div>
 			<div class="custom-content">
 				<div class="switcher">
 					<div class="switch-block">
-						<h4>Logo Üst Kısım</h4>
+						<h4><?php echo $dil['logo-ust-kisim'] ?></h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeLogoHeaderColor" data-color="dark"></button>
 							<button type="button" class="changeLogoHeaderColor" data-color="blue"></button>
@@ -28,7 +28,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Üst Kısım</h4>
+						<h4><?php echo $dil['ust-kisim'] ?></h4>
 						<div class="btnSwitch">
 							<button type="button" class="selected changeTopBarColor" data-color="dark"></button>
 							<button type="button" class="changeTopBarColor" data-color="blue"></button>
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Sol Kısım</h4>
+						<h4><?php echo $dil['sol-kisim'] ?></h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeSideBarColor" data-color="white"></button>
 							<button type="button" class="changeSideBarColor" data-color="dark"></button>
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="switch-block">
-						<h4>Arkaplan</h4>
+						<h4><?php echo $dil['arkaplan'] ?></h4>
 						<div class="btnSwitch">
 							<button type="button" class="changeBackgroundColor" data-color="bg2"></button>
 							<button type="button" class="changeBackgroundColor selected" data-color="bg1"></button>

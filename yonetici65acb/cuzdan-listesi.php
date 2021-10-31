@@ -59,7 +59,7 @@ alert("Cüzdan Başarıyla Silindi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Cüzdan Listesi</h4>
+							<h4 class="page-title"><?php echo $dil['cuzdan-lisesi-baslik'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -70,7 +70,7 @@ alert("Cüzdan Başarıyla Silindi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Görüntüle</a>
+									<a href="#"><?php echo $dil['goruntule-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -90,7 +90,7 @@ alert("Cüzdan Başarıyla Silindi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Cüzdan Listesi</b></h2>
+                        <h2><b><?php echo $dil['cuzdan-lisesi-baslik'] ?></b></h2>
                         </div>
                         
                         
@@ -100,11 +100,11 @@ alert("Cüzdan Başarıyla Silindi!");
 												<thead>
 													<tr>
 														<th>#</th>
-														<th>Cüzdan Kimliği</th>
-                                                        <th>Cüzdan Takma Adı</th>
-                                                        <th>Üye Adı</th>
-                                                        <th>Cüzdan Aktifliği</th>
-                                                        <th>Seçenekler</th>
+														<th><?php echo $dil['cuzdan-kimligi'] ?></th>
+                                                        <th><?php echo $dil['cuzdan-takma-adi'] ?></th>
+                                                        <th><?php echo $dil['uye-adi'] ?></th>
+                                                        <th><?php echo $dil['cuzdan-aktifligi'] ?></th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
                                                         
                                                         
 														
@@ -144,12 +144,12 @@ alert("Cüzdan Başarıyla Silindi!");
                                     if($aktiflik == 1){
                                         ?>
                                         <span class="badge badge-success badge-pill px-35">
-                                        <?php echo "Aktif cüzdan";
+                                        <?php echo $dil['aktif-cuzdan-metin'];
                                     } else{
                                         ?>
                                         <span class="badge badge-danger badge-pill px-35">
                                         <?php
-                                        echo "Devre dışı cüzdan";
+                                        echo $dil['devre-disi-cuzdan-metin'];
                                     }
                                     
                                     ?></td>

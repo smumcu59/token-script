@@ -68,7 +68,7 @@ alert("İade nedeni başarıyla eklendi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">İade Nedenleri</h4>
+							<h4 class="page-title"><?php echo $dil['iade-nedenleri-baslik'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -79,7 +79,7 @@ alert("İade nedeni başarıyla eklendi!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Yönetim İşlemi</a>
+									<a href="#"><?php echo $dil['yonetim-islemi-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -99,7 +99,7 @@ alert("İade nedeni başarıyla eklendi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>İade Nedenleri</b></h2>
+                        <h2><b><?php echo $dil['iade-nedenleri-baslik'] ?></b></h2>
                         </div>
                         <div class="col-md-12 col-lg-12">
                         <br>
@@ -107,7 +107,7 @@ alert("İade nedeni başarıyla eklendi!");
                             <br>
                             <div class="row">
                             <div class="col-md-5 col-lg-5">
-                            <label class="from cuzdanAdi">İade Nedeni <zorunlualan>*</zorunlualan></label>
+                            <label class="from cuzdanAdi"><?php echo $dil['iade-nedeni-metin'] ?> <zorunlualan>*</zorunlualan></label>
                                 <input type="text" class="form-control form-control" name="iade_nedeni" placeholder="Lütfen bir iade nedeni girin." required>
                                                                
 
@@ -127,9 +127,9 @@ alert("İade nedeni başarıyla eklendi!");
 											<table id="datatable" class="display table table-striped table-hover" >
 												<thead>
 													<tr>
-														<th>İade Nedeni</th>
+														<th><?php echo $dil['iade-nedeni-metin'] ?></th>
 														
-                                                        <th>Seçenekler</th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
                                                         
 														
 														

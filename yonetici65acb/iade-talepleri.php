@@ -66,7 +66,7 @@ alert("İade başarıyla onaylandı!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Tüm İade Talepleri</h4>
+							<h4 class="page-title"><?php echo $dil['tum-iade-talepleri-metin'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -77,7 +77,7 @@ alert("İade başarıyla onaylandı!");
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">Görüntüle</a>
+									<a href="#"><?php echo $dil['goruntule-metin'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -97,7 +97,7 @@ alert("İade başarıyla onaylandı!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Tüm İade Talepleri</b></h2>
+                        <h2><b><?php echo $dil['tum-iade-talepleri-metin'] ?></b></h2>
                         </div>
                         
                         
@@ -107,13 +107,13 @@ alert("İade başarıyla onaylandı!");
 												<thead>
 													<tr>
 														<th>#</th>
-														<th>Üye İsim Soyisim</th>
+														<th><?php echo $dil['uye-isim-soyisim'] ?></th>
                                                         
-                                                        <th>İade Sebebi</th>
-                                                        <th>Tarih/Saat</th>
-                                                        <th>TXID</th>
+                                                        <th><?php echo $dil['iade-sebebi'] ?></th>
+                                                        <th><?php echo $dil['tarih-saat'] ?></th>
+                                                        <th><?php echo $dil['txid'] ?></th>
 														
-                                                        <th>İade Durumu</th>
+                                                        <th><?php echo $dil['iade-durumu'] ?></th>
                                                         
 														
 														
@@ -207,7 +207,7 @@ alert("İade başarıyla onaylandı!");
 											
 											<div class="col-md-3 col-lg-3">
                                                 <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 

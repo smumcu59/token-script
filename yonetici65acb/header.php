@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 include 'islemler/baglan.php';
+include 'diller/turkish.php';
 
 
 
@@ -42,7 +43,7 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Archive Token - Geçmişini Geleceğin İle Koru</title>
+	<title><?php echo $dil['header-baslik'] ?></title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="assets/img/icon.ico" type="image/x-icon"/>
 
@@ -115,7 +116,7 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 											<div class="avatar-lg"><img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4><?php echo $veri_cek['ad_soyad']; ?></h4>
-												<p class="text-muted"><?php echo strip_tags($veri_cek['elektronik_posta_adresi']); ?></p><a href="parolayi-degistir" class="btn btn-xs btn-secondary btn-sm">Parolamı Değiştir</a>
+												<p class="text-muted"><?php echo strip_tags($veri_cek['elektronik_posta_adresi']); ?></p><a href="parolayi-degistir" class="btn btn-xs btn-secondary btn-sm"><?php echo $dil['parolami-degistir'] ?></a>
 											</div>
 										</div>
 									</li>
@@ -123,7 +124,7 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 										<div class="dropdown-divider"></div>
 										
 										
-										<a class="dropdown-item" href="cikis-yap">Çıkış yap</a>
+										<a class="dropdown-item" href="cikis-yap"><?php echo $dil['cikis-yap'] ?></a>
 									</li>
 								</div>
 							</ul>
@@ -145,7 +146,7 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 									<?php echo strip_tags($veri_cek['ad_soyad']); ?>
-									<span class="user-level">Sistem Yöneticisi</span>
+									<span class="user-level"><?php echo $dil['sistem-yoneticisi-metin'] ?></span>
 									
 									<span class="caret"></span>
 								</span>
@@ -157,7 +158,7 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 								<ul class="nav">
 									<li>
 										<a href="parolayi-degistir">
-											<span class="link-collapse">Parolamı Değiştir</span>
+											<span class="link-collapse"><?php echo $dil['parolami-degistir'] ?></span>
 										</a>
 									</li>
 									
@@ -171,12 +172,12 @@ if($_SESSION["yonetici-oturumu"]=="1") {
                     <li class="nav-item">
 							<a href="index">
 								<i class="fas fa-home"></i>
-								<p>Anasayfa</p>
+								<p><?php echo $dil['anasayfa-metin'] ?></p>
 								
 							</a>
 							<a href="takvim">
 								<i class="fas fa-calendar"></i>
-								<p>Takvim</p>
+								<p><?php echo $dil['takvim-metin'] ?></p>
 								
 							</a>
 						</li>
@@ -188,35 +189,35 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 							<span class="sidebar-mini-icon">
 								<i class="fa fa-ellipsis-h"></i>
 							</span>
-							<h4 class="text-section">GENEL İŞLEMLER</h4>
+							<h4 class="text-section"><?php echo $dil['genel-islemler'] ?></h4>
 						</li>
 						
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#basel">
 								<i class="fa fa-users"></i>
-								<p>Kullanıcı İşlemleri</p>
+								<p><?php echo $dil['kullanici-islemleri-metin'] ?></p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="basel">
 								<ul class="nav nav-collapse">
 								<li>
 										<a href="uye-listesi">
-											<span class="sub-item">Üye Listesi</span>
+											<span class="sub-item"><?php echo $dil['uye-listesi-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="cuzdan-listesi">
-											<span class="sub-item">Kayıtlı Cüzdan Listesi</span>
+											<span class="sub-item"><?php echo $dil['kayitli-cuzdan-listesi-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="manuel-arh-tekil">
-											<span class="sub-item">Manuel ARH Yükleme (Tekil)</span>
+											<span class="sub-item"><?php echo $dil['manuel-token-yukleme-tekil-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="manuel-arh-cogul">
-											<span class="sub-item">Manuel ARH Yükleme (Çoğul)</span>
+											<span class="sub-item"><?php echo $dil['manuel-token-yukleme-cogul-metin'] ?></span>
 										</a>
 									</li>
 									
@@ -228,24 +229,24 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base2">
 								<i class="fa fa-dollar-sign"></i>
-								<p>Satış İşlemleri</p>
+								<p><?php echo $dil['satis-islemleri-metin'] ?></p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="base2">
 								<ul class="nav nav-collapse">
 								<li>
 										<a href="onay-bekleyen-satislar">
-											<span class="sub-item">Onay Bekleyen Satışlar</span>
+											<span class="sub-item"><?php echo $dil['onay-bekleyen-satislar-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="tamamlanan-satislar">
-											<span class="sub-item">Tamamlanan Satışlar</span>
+											<span class="sub-item"><?php echo $dil['tamamlanan-satislar-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="red-edilen-satislar">
-											<span class="sub-item">Red Edilen Satışlar</span>
+											<span class="sub-item"><?php echo $dil['red-edilen-satislar-metin'] ?></span>
 										</a>
 									</li>
 									
@@ -259,19 +260,19 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base3">
 								<i class="fa fa-money-bill"></i>
-								<p>İade İşlemleri</p>
+								<p><?php echo $dil['iade-islemleri-metin'] ?></p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="base3">
 								<ul class="nav nav-collapse">
 								<li>
 										<a href="bekleyen-iade-talepleri">
-											<span class="sub-item">Bekleyen İade Talepleri</span>
+											<span class="sub-item"><?php echo $dil['bekleyen-iade-talepleri-baslik'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="iade-talepleri">
-											<span class="sub-item">Tüm İade Talepleri</span>
+											<span class="sub-item"><?php echo $dil['tum-iade-talepleri-metin'] ?></span>
 										</a>
 									</li>
 									
@@ -284,19 +285,19 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base4">
 								<i class="fa fa-user-tie"></i>
-								<p>Yönetici İşlemleri</p>
+								<p><?php echo $dil['yonetici-islemleri-metin'] ?></p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="base4">
 								<ul class="nav nav-collapse">
 								<li>
 										<a href="yonetici-listesi">
-											<span class="sub-item">Yönetici Listesi</span>
+											<span class="sub-item"><?php echo $dil['yonetici-listesi-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="yonetici-ekle">
-											<span class="sub-item">Yönetici Ekle</span>
+											<span class="sub-item"><?php echo $dil['yonetici-ekle-metin'] ?></span>
 										</a>
 									</li>
 									
@@ -308,24 +309,24 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#base5">
 								<i class="fa fa-cog"></i>
-								<p>Sistem Ayarları</p>
+								<p><?php echo $dil['sistem-ayarlari-metin'] ?></p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="base5">
 								<ul class="nav nav-collapse">
 								<li>
 										<a href="paket-yoneticisi">
-											<span class="sub-item">Paket Yöneticisi</span>
+											<span class="sub-item"><?php echo $dil['paket-yoneticisi-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="token-ayarlari">
-											<span class="sub-item">Token Ayarları</span>
+											<span class="sub-item"><?php echo $dil['token-ayarlari-metin'] ?></span>
 										</a>
 									</li>
 									<li>
 										<a href="iade-nedenleri">
-											<span class="sub-item">İade Nedenleri</span>
+											<span class="sub-item"><?php echo $dil['iade-nedenleri-metin'] ?></span>
 										</a>
 									</li>
 									

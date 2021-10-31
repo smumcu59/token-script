@@ -75,7 +75,7 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title">Onay Bekleyen Satış İşlemleri</h4>
+							<h4 class="page-title"><?php echo $dil['satis-islemi-baslik'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -86,7 +86,7 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
 									<i class="flaticon-right-arrow"></i>
 								</li>
 								<li class="nav-item">
-									<a href="#">İşleme</a>
+									<a href="#"><?php echo $dil['isleme-yazi'] ?></a>
 								</li>
 								<li class="separator">
 									<i class="flaticon-right-arrow"></i>
@@ -106,7 +106,7 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b>Onay Bekleyen Satış İşlemleri</b></h2>
+                        <h2><b><?php echo $dil['satis-islemi-baslik'] ?></b></h2>
                         </div>
                         
                         
@@ -116,14 +116,15 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
 												<thead>
 													<tr>
 														
-														<th>TxID (İşlem) Numarası</th>
+														<th><?php echo $dil['txid-metin'] ?></th>
                                                         
-                                                        <th>Ödeme Sağlanan Cüzdan</th>
-                                                        <th>Yatırılacak Token</th>
-                                                        <th>Ödenen Tutar</th>
+                                                        <th><?php echo $dil['odeme-saglanan-cuzdan'] ?></th>
+                                                        <th><?php echo $dil['yatirilacak_token'] ?></th>
+                                                        <th><?php echo $dil['odenen-tutar-metin'] ?></th>
+
 														
-                                                        <th>İşlem Durumu</th>
-                                                        <th>Seçenekler</th>
+                                                        <th><?php echo $dil['islem-durumu-metin'] ?></th>
+                                                        <th><?php echo $dil['secenekler'] ?></th>
 														
 														
 														
@@ -235,7 +236,7 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
 											
 											<div class="col-md-3 col-lg-3">
                                                 <br>
-                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don">Geri Dön</button>
+                                                <button type="submit" class="btn btn-secondary btn-danger  btn-stiped" type="button" name="anasayfaya-don"><?php echo $dil['geri-don-buton'] ?></button>
                                                 
 
 
