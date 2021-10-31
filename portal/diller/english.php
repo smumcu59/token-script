@@ -1,6 +1,6 @@
 <?php 
 
-## Giriş yap
+## Giriş yap - Login Page
 $dil['giris-yap-baslik'] = "Archive Token Customer Login";
 $dil['e-posta-girin'] = "Enter your e-mail address...";
 $dil['parola-girin'] = "Enter your password...";
@@ -11,7 +11,7 @@ $dil['kayit-ol'] = "Register";
 ##
 
 
-## Müşteri paneli 
+## Müşteri paneli - Customer Panel
 
 $dil['token-bakiyesi-profil'] = "Token Balance :";
 $dil['gecmisini-gelecegin-ile-koru-title'] = "Protect Your Past With Your Future";
@@ -37,7 +37,7 @@ $dil['satin-al'] = "Buy";
 
 ##
 
-## Parolamı değiştir sayfası
+## Parolamı değiştir sayfası - Change password page
 
 $dil['parolayi-degistir-title'] = "Change Password";
 $dil['parola-degistirme-islemi-title-aciklama'] = "Password Change Process";
@@ -83,7 +83,7 @@ $dil['islem-durumu'] = "Transaction Status";
 
 
 ##
-## İade talepleri
+## İade talepleri - Refund/Return request page
 
 $dil['iade-talepleri'] = "Return Requests";
 $dil['basvuru-tarih-saat'] = "Application Date/Time";
@@ -92,7 +92,7 @@ $dil['iade-durumu'] = "Return Status";
 $dil['iade-basvurusu-yap'] = "Apply for a Return";
 ##
 
-## Kasa
+## Kasa - Checkout
 
 $dil['kasa'] = "Checkout";
 $dil['satin-alim-islemi'] = "Purchase Process";
@@ -120,7 +120,7 @@ $dil['cuzdan-adi-aciklama-11'] = "Please enter wallet name...";
 
 ##
 
-## Cüzdanı düzenle
+## Cüzdanı düzenle - Edit wallet
 $dil['cuzdani-duzenle'] = "Edit Wallet";
 $dil['duzenleme-islemi'] = "Edit Process";
 $dil['cuzdani-guncelle'] = "Update Wallet";
@@ -128,7 +128,7 @@ $dil['cuzdani-guncelle'] = "Update Wallet";
 
 ##
 
-## İade başvurusu yap
+## İade başvurusu yap - Return/Refund apply
 
 $dil['iade-basvurusu-yap'] = "Apply for a Return";
 $dil['basvuru'] = "Application";
