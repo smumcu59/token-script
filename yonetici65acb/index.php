@@ -386,7 +386,7 @@ siyah
             <div class="price"><strong><?php echo $token_degeri_3 ?></strong> ARH + % <?php echo $paket_kazanci_3 ?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." fazladan ARH hediye!" ?></li>
+                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." ".$dil['fazladan-token-kazanin'] ?></li>
                     <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i> <?php echo $dil['her-zaman-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-ariza-iade-politikasi'] ?></li>

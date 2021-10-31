@@ -59,7 +59,7 @@ alert("Cüzdan Başarıyla Silindi!");
 				<div class="content">
 					<div class="page-inner">
 						<div class="page-header">
-							<h4 class="page-title"><?php echo $dil['cuzdan-lisesi-baslik'] ?></h4>
+							<h4 class="page-title"><?php echo $dil['cuzdan-listesi-baslik'] ?></h4>
 							<ul class="breadcrumbs">
 								<li class="nav-home">
 									<a href="#">
@@ -90,7 +90,7 @@ alert("Cüzdan Başarıyla Silindi!");
                                 
                                 
                         <div class="col-md-12 col-lg-12">
-                        <h2><b><?php echo $dil['cuzdan-lisesi-baslik'] ?></b></h2>
+                        <h2><b><?php echo $dil['cuzdan-listesi-baslik'] ?></b></h2>
                         </div>
                         
                         
