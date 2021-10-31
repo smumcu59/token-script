@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 include 'portal/islemler/baglan.php';
+
  
 
 
@@ -29,7 +30,7 @@ if (isset($_SESSION['kayıt-basarili'])){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Archive Token - Müşteri Girişi</title>
+    <title><?php echo $dil['giris-yap-baslik'] ?></title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -68,21 +69,21 @@ if (isset($_SESSION['kayıt-basarili'])){
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4"><b>Archive Token Müşteri Girişi</b></h1>
+                                        <h1 class="h4 text-gray-900 mb-4"><b><?php echo $dil['giris-yap-baslik'] ?></b></h1>
                                     </div>
                                     <form class="user">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 name="elektronikPosta" aria-describedby="emailHelp"
-                                                placeholder="Elektronik posta adresinizi giriniz..." required>
+                                                placeholder="<?php echo $dil['e-posta-girin'] ?>" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                name="parola" placeholder="Parolanızı giriniz..." required>
+                                                name="parola" placeholder="<?php $dil['parola-girin'] ?>" required>
                                         </div>
                                        
                                         
-                                        <input type="submit" class="btn btn-danger btn-user btn-block" name="normal-giris" value="Giriş yap">
+                                        <input type="submit" class="btn btn-danger btn-user btn-block" name="normal-giris" value="<?php echo $dil['giris-yap-buton'] ?>">
                                            
                                         
                                         <hr>
@@ -90,10 +91,10 @@ if (isset($_SESSION['kayıt-basarili'])){
                                     </form>
                                     <hr>
                                     <div class="text-center"  >
-                                        <a class="small" id="forgot" href="parolami-unuttum">Portal Parolamı Unuttum</a>
+                                        <a class="small" id="forgot" href="parolami-unuttum"><?php echo $dil['portal-parolami-unuttum'] ?></a>
                                     </div>
                                     <div class="text-center" >
-                                        <a class="small" id="forgot" href="kayit-ol">Kayıt Ol</a>
+                                        <a class="small" id="forgot" href="kayit-ol"><?php echo $dil['kayit-ol'] ?></a>
                                     </div>
                                 </div>
                             </div>
