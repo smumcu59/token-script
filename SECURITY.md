@@ -10,7 +10,7 @@ Aşağıda tabloda göreceğiniz sürümlerden hangi sürümlere destek verilip 
 | < 1.0.x   | :x:               |
 
 
-## Reporting a Vulnerability
+## Açık bildirimi
 
 Tespit ettiğiniz güvenlik açıklarının detaylarını b81mediaofficial@gmail.com adresine mail göndermelisiniz.
 
