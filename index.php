@@ -101,15 +101,15 @@ include 'diller/turkish.php';
   }
   .login_btn
 {
-	min-width:50px;
-	height:40px;
-	background-color:#ffffff;
-	float:left;
-	border-radius:50px;
-	padding:0px 13px;
-	line-height:40px;
-	cursor:pointer;
-	transition: all 0.2s ease;
+  min-width:50px;
+  height:40px;
+  background-color:#ffffff;
+  float:left;
+  border-radius:50px;
+  padding:0px 13px;
+  line-height:40px;
+  cursor:pointer;
+  transition: all 0.2s ease;
 }
   
 </style>
@@ -138,7 +138,7 @@ include 'diller/turkish.php';
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <br>
                   <ul class="nav navbar-nav navbar-right animated fadeInUp">
-                    <li><a onclick="smoothScroll(document.getElementById('intro'))"><b><?php echo $dil['archive-nedir-header']; ?></b></a></li>
+                    <li><a onclick="smoothScroll(document.getElementById('intro'))"><b><?php echo $dil['token-nedir-header']; ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('faz'))"><b><?php echo $dil['faz-sistemi-header']; ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('zaman-cizelgesi'))"><b><?php echo $dil['yol-haritasi-header']; ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('token'))"><b>Archive Token</b></a></li>
@@ -169,7 +169,7 @@ include 'diller/turkish.php';
 
                 <br>
                 <form action="islemler/islem.php" method="POST">  
-                <a href="giris-yap" class="btn proccess-bar-orange"><span class="fas fa-coins"></span> <?php echo $dil['archive-token-satin-al-butonlari']  ?></a> <br> <br>
+                <a href="giris-yap" class="btn proccess-bar-orange"><span class="fas fa-coins"></span> <?php echo $dil['token-satin-al-butonlari']  ?></a> <br> <br>
               <a href="img/whitepaper.pdf" class="btn proccess-bar-orange"><span class="fas fa-newspaper"></span> Whitepaper</a>
               
               <a href="https://t.me/joinchat/lCBOCxplfkY4MzY0" class="btn proccess-bar-orange"><span class="fab fa-telegram-plane"></span> Telegram</a>
@@ -222,20 +222,20 @@ include 'diller/turkish.php';
            <div class="col-md-12 col-lg-12">
              <div class="row">
                <div class="col-md-6 col-lg-6">
-               <label><?php echo $dil['simdiye-kadar-yapilan-toplam-arh-satisi']; ?> <?php echo $toplam_satis." ARH" ?> </label>
+               <label><?php echo $dil['simdiye-kadar-yapilan-toplam-token-satisi']; ?> <?php echo $toplam_satis." ARH" ?> </label>
                </div>
                 
                 <div class="col-md-6 col-lg-6">
-                  <label><?php echo $dil['suanda-satista-olan-toplam-arh'] ?> <?php echo $toplam_satista ?> ARH</label>
+                  <label><?php echo $dil['suanda-satista-olan-toplam-token'] ?> <?php echo $toplam_satista ?> ARH</label>
                   </div>
                   
                     <div class="col-md-6 col-lg-6">
                       <br>
-                    <label><?php echo $dil['suana-kadar-satilan-toplam-arh-degeri']; ?><?php echo "$".$toplam_satilan_dolar ?> </label>
+                    <label><?php echo $dil['suana-kadar-satilan-toplam-token-degeri']; ?><?php echo "$".$toplam_satilan_dolar ?> </label>
                     </div>
                     <div class="col-md-6 col-lg-6">
                       <br>
-                    <label><?php echo $dil['satista-olan-toplam-arh-degeri']; ?> <?php echo "$".$toplam_satilacak_dolar ?> </label>
+                    <label><?php echo $dil['satista-olan-toplam-token-degeri']; ?> <?php echo "$".$toplam_satilacak_dolar ?> </label>
                     </div>
                     <div class="col-md-12 col-lg-12">
                       <br>
@@ -249,7 +249,7 @@ include 'diller/turkish.php';
           </div><!-- .col-md-5 close -->
         </center>
         <center>
-        <a href="giris-yap" class="btn proccess-bar-orange "><span class="fas fa-coins"></span> <?php echo $dil['archive-token-satin-al-butonlari']  ?></a> </center>
+        <a href="giris-yap" class="btn proccess-bar-orange "><span class="fas fa-coins"></span> <?php echo $dil['token-satin-al-butonlari']  ?></a> </center>
         </div>
       </div>
       <label><br></label>
@@ -261,10 +261,10 @@ include 'diller/turkish.php';
           <div class="col-md-7 col-sm-12">
             <div class="block">
               <div class="section-title">
-                <h2><?php echo $dil['archive-token-nedir'] ?></h2>
+                <h2><?php echo $dil['token-nedir'] ?></h2>
                 
               </div>
-              <p><?php echo $dil['archive-token-nedir-aciklama'] ?></p>
+              <p><?php echo $dil['token-nedir-aciklama'] ?></p>
             </div>
           </div><!-- .col-md-7 close -->
           <div class="col-md-5 col-sm-12">
@@ -287,7 +287,7 @@ include 'diller/turkish.php';
           
           
           
-          <a href="giris-yap" class="btn proccess-bar-orange"><span class="fas fa-coins"></span> <?php echo $dil['archive-token-satin-al-butonlari']; ?></a>
+          <a href="giris-yap" class="btn proccess-bar-orange"><span class="fas fa-coins"></span> <?php echo $dil['token-satin-al-butonlari']; ?></a>
         </div>
       </div>
     </div>
@@ -411,7 +411,7 @@ include 'diller/turkish.php';
             <div class="left-heading">
               <h5>Archive Token</h5>
             </div>
-            <p><?php echo $dil['archive-token-yol-haritasi-alti-aciklama'] ?> </p>
+            <p><?php echo $dil['token-yol-haritasi-alti-aciklama'] ?> </p>
             <p><b><?php echo $dil['sozlesme-adresi'] ?>  :</b></p>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_outer">
               <input type="text" class="form-control" value="0x857a645053ef69490682c98a2cac91436ce2ec74" disabled="">
@@ -440,11 +440,11 @@ include 'diller/turkish.php';
                   <td>Binance Smart Chain</td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo $dil['toplam-archive-token'] ?></th>
+                  <th scope="row"><?php echo $dil['toplam-token'] ?></th>
                   <td>100.000.000 ARH</td>
                 </tr>
                 <tr>
-                  <th scope="row"><?php echo $dil['on-satis-archive-token'] ?></th>
+                  <th scope="row"><?php echo $dil['on-satis-token'] ?></th>
                   <td>10.000.000 ARH</td>
                 </tr>
                 <tr>
@@ -491,11 +491,11 @@ include 'diller/turkish.php';
                
               </div> </center>
               <div id="sorucevap">
-                <div class="s"><?php echo $dil['sss-archive-token-nedir'] ?></div><div class="c"><br> <?php echo $dil['sss-archive-token-nedir-aciklama'] ?> <br></div>
-                <div class="s"><?php echo $dil['sss-archive-token-nasil-satin-alinir']; ?></div><div class="c"><br><?php echo $dil['sss-archive-token-nasil-satin-alinir-aciklama']; ?> <br></div>
-                <div class="s"><?php echo $dil['sss-archive-token-alabilecegim-kac-tane-paket-var']; ?></div><div class="c"><br><?php echo $dil['sss-archive-token-alabilecegim-kac-tane-paket-var-aciklama'] ?> <br></div>
+                <div class="s"><?php echo $dil['sss-token-nedir'] ?></div><div class="c"><br> <?php echo $dil['sss-token-nedir-aciklama'] ?> <br></div>
+                <div class="s"><?php echo $dil['sss-token-nasil-satin-alinir']; ?></div><div class="c"><br><?php echo $dil['sss-token-nasil-satin-alinir-aciklama']; ?> <br></div>
+                <div class="s"><?php echo $dil['sss-token-alabilecegim-kac-tane-paket-var']; ?></div><div class="c"><br><?php echo $dil['sss-token-alabilecegim-kac-tane-paket-var-aciklama'] ?> <br></div>
                 <div class="s"><?php echo $dil['sss-on-satis-ne-zaman-bitecek']; ?></div><div class="c"><br><?php echo $dil['sss-on-satis-ne-zaman-bitecek-aciklama']; ?><br></div>
-                <div class="s"><?php echo $dil['sss-archive-token-bilinirligi'] ?></div><div class="c"><br><?php echo $dil['sss-archive-token-bilinirligi-aciklama'] ?><br></div>
+                <div class="s"><?php echo $dil['sss-token-bilinirligi'] ?></div><div class="c"><br><?php echo $dil['sss-token-bilinirligi-aciklama'] ?><br></div>
                 <div class="s"><?php echo $dil['sss-en-az-kac-adet-alinir']  ?></div><div class="c"><br><?php echo $dil['sss-en-az-kac-adet-alinir-aciklama']  ?><br></div>
               
               <br> <br>
@@ -763,10 +763,10 @@ $random_sayi = 1;
 
  
 <script type="text/javascript">
-	$(document).ready(function(){
+  $(document).ready(function(){
         //sayfa açıldığında otomatik açılması için
-		$("#modalNesne").modal('show');
-	});
+    $("#modalNesne").modal('show');
+  });
 </script>
 </head>
 <body>
@@ -780,7 +780,7 @@ $random_sayi = 1;
             </div>
             <div class="modal-body">
                 
-				<h3><center><?php 
+        <h3><center><?php 
 
           $veriyi_alsinssspp = $db->prepare("SELECT * FROM popup_pencere_maddeleri WHERE id=?");
           $veriyi_alsinssspp->execute(array($random_sayi));
