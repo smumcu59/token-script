@@ -1,6 +1,6 @@
 <?php
 
-include 'yonetici65acb/diller/turkish.php';
+include 'portal/diller/turkish.php';
 
 ?>
 

@@ -3,7 +3,7 @@ session_start();
 ob_start();
 include 'portal/islemler/baglan.php';
 
-include 'yonetici65acb/diller/turkish.php';
+include 'portal/diller/turkish.php';
 
  
 
