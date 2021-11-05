@@ -13,6 +13,14 @@ $dil['geri-don-buton'] = "Geri dön";
 
 ##
 
+## Yönetici girişi
+
+$dil['yonetici-giris-baslik'] = "Yönetici Kontrol Paneli - Giriş Yap";
+
+
+
+##
+
 ## Cüzdan listesi 
 
 $dil['cuzdan-listesi-baslik'] = "Cüzdan Listesi";

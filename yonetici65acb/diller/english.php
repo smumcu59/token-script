@@ -25,6 +25,13 @@ $dil['aktif-cuzdan-metin'] = "Aktif Cüzdan";
 $dil['devre-disi-cuzdan-metin'] = "Devre Dışı Cüzdan";
 
 ##
+## Yönetici girişi
+
+$dil['yonetici-giris-baslik'] = "Yönetici Kontrol Paneli - Giriş Yap";
+
+
+
+##
 ## Giriş yap sayfası
 
 $dil['giris-yap-baslik'] = "Sisteme Giriş Yap";
