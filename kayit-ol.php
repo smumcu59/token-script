@@ -9,11 +9,14 @@ if(isset($_SESSION['dil'])){
         include 'portal/diller/turkish.php';
     }
     else if($dil == 2){
-        include 'portal/diller/turkish.php';
+        include 'portal/diller/english.php';
     }
     else{
-        include 'portal/diller/turkish.php';
+        include 'portal/diller/german.php';
     }
+}
+else{
+    include 'portal/diller/turkish.php';
 }
 
 

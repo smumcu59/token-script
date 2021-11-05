@@ -11,11 +11,14 @@ if(isset($_SESSION['dil'])){
         include 'yonetici65acb/diller/turkish.php';
     }
     else if($dil == 2){
-        include 'yonetici65acb/diller/turkish.php';
+        include 'yonetici65acb/diller/english.php';
     }
     else{
-        include 'yonetici65acb/diller/turkish.php';
+        include 'yonetici65acb/diller/german.php';
     }
+}
+else{
+	include 'yonetici65acb/diller/turkish.php';
 }
 
 
