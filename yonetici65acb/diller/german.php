@@ -40,6 +40,21 @@ $dil['cuzdan-listesine-geri-don-buton'] = "Cüzdan Listesine Geri Dön";
 
 ##
 
+## Kayıt ol sayfası
+
+$dil['kayit-ol-baslik'] = "Kayıt Ol";
+$dil['kayit-ol-isim-soyisim'] = "İsim Soyisim";
+$dil['parola-girin'] = "Lütfen parolanızı giriniz.";
+$dil['e-posta-girin'] = "Lütfen epostanızı giriniz.";
+$dil['referans-kullanici-mail'] = "Referanslı kullanıcı maili";
+$dil['kayit-ol-buton'] = "Gönder";
+$dil['portal-parolami-unuttum'] = "Portal parolamı unuttum.";
+$dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yapın.";
+
+
+
+##
+
 ## Footer özelleştirme
 
 $dil['logo-ust-kisim'] = "Logo üst kısım";

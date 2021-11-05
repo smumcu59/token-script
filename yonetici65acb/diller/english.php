@@ -25,6 +25,12 @@ $dil['aktif-cuzdan-metin'] = "Aktif Cüzdan";
 $dil['devre-disi-cuzdan-metin'] = "Devre Dışı Cüzdan";
 
 ##
+## Giriş yap sayfası
+
+$dil['giris-yap-baslik'] = "Sisteme Giriş Yap";
+$dil['giris-yap-buton'] = "Giriş Yap";
+$dil['kayit-ol'] = "Kayıt Ol"
+##
 
 ## Cüzdanı düzenle
 
@@ -35,6 +41,23 @@ $dil['cuzdan-adi'] = "Cüzdan Adı (Cüzdanınızı diğer cüzdanlarınızdan a
 $dil['cuzdan-adi-girin'] = "Cüzdan adı giriniz...";
 $dil['cuzdani-guncelle-buton'] = "Cüzdanı Güncelle";
 $dil['cuzdan-listesine-geri-don-buton'] = "Cüzdan Listesine Geri Dön";
+
+
+
+
+
+##
+
+## Kayıt ol sayfası
+
+$dil['kayit-ol-baslik'] = "Kayıt Ol";
+$dil['kayit-ol-isim-soyisim'] = "İsim Soyisim";
+$dil['parola-girin'] = "Lütfen parolanızı giriniz.";
+$dil['e-posta-girin'] = "Lütfen epostanızı giriniz.";
+$dil['referans-kullanici-mail'] = "Referanslı kullanıcı maili";
+$dil['kayit-ol-buton'] = "Gönder";
+$dil['portal-parolami-unuttum'] = "Portal parolamı unuttum.";
+$dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yapın.";
 
 
 

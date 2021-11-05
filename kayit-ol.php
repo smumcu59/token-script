@@ -1,5 +1,7 @@
 <?php
 
+include 'yonetici65acb/diller/turkish.php';
+
 ?>
 
 <!DOCTYPE html>

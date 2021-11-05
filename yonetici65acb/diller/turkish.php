@@ -40,6 +40,28 @@ $dil['cuzdan-listesine-geri-don-buton'] = "Cüzdan Listesine Geri Dön";
 
 ##
 
+## Kayıt ol sayfası
+
+$dil['kayit-ol-baslik'] = "Sisteme Kayıt Ol";
+$dil['kayit-ol-isim-soyisim'] = "İsim Soyisim";
+$dil['parola-girin'] = "Lütfen parolanızı giriniz.";
+$dil['e-posta-girin'] = "Lütfen epostanızı giriniz.";
+$dil['referans-kullanici-mail'] = "Referanslı kullanıcı maili";
+$dil['kayit-ol-buton'] = "Gönder";
+$dil['portal-parolami-unuttum'] = "Portal parolamı unuttum.";
+$dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yapın.";
+
+
+
+##
+
+## Giriş yap sayfası
+
+$dil['giris-yap-baslik'] = "Sisteme Giriş Yap";
+$dil['giris-yap-buton'] = "Giriş Yap";
+$dil['kayit-ol'] = "Kayıt Ol"
+##
+
 ## Footer özelleştirme
 
 $dil['logo-ust-kisim'] = "Logo üst kısım";
