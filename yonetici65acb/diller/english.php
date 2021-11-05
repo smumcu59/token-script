@@ -185,7 +185,7 @@ $dil['secim-yapin-metin'] = "Seçim Yapın";
 $dil['satis-islemi-baslik'] = "Onay Bekleyen Satış İşlemleri";
 $dil['txid-metin'] = "Txid İşlem Numarası"; 
 $dil['odeme-saglanan-cuzdan'] = "Ödeme Sağlanan Cüzdan";
-$dil['yatirilacak-token'] = "Yatırılacak Token";
+$dil['yatirilacak_token'] = "Yatırılacak Token";
 $dil['odenen-tutar-metin'] = "Ödenen Tutar";
 $dil['islem-durumu-metin'] = "İşlem Durumu";
 
