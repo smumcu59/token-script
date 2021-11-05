@@ -2,6 +2,19 @@
 session_start();
 ob_start();
 include 'yonetici65acb/islemler/baglan.php';
+
+if(isset($_SESSION['dil'])){
+    $dil = $_SESSION['dil'];
+    if($dil == 1){
+        include 'yonetici65acb/diller/turkish.php';
+    }
+    else if($dil == 2){
+        include 'yonetici65acb/diller/english.php';
+    }
+    else{
+        include 'yonetici65acb/diller/german.php';
+    }
+}
  
 
 

@@ -3,7 +3,20 @@ session_start();
 ob_start();
 include 'portal/islemler/baglan.php';
 
-include 'portal/diller/turkish.php';
+
+
+if(isset($_SESSION['dil'])){
+    $dil = $_SESSION['dil'];
+    if($dil == 1){
+        include 'portal/diller/turkish.php';
+    }
+    else if($dil == 2){
+        include 'portal/diller/turkish.php';
+    }
+    else{
+        include 'portal/diller/turkish.php';
+    }
+}
 
  
 

@@ -15,7 +15,20 @@ $toplam_satilacak_dolar = $toplam_satista*0.2;
 
 $ilerleme_cubugu_algoritmasi = $toplam_satis/25000;
 
-include 'diller/turkish.php';
+
+
+if(isset($_SESSION['dil'])){
+    $dil = $_SESSION['dil'];
+    if($dil == 1){
+        include 'diller/turkish.php';
+    }
+    else if($dil == 2){
+        include 'diller/turkish.php';
+    }
+    else{
+        include 'diller/turkish.php';
+    }
+}
 
 ?>
 
@@ -583,7 +596,16 @@ include 'diller/turkish.php';
                 <li><a href="#"><b>Terms</b></a></li>
               </ul>
             </div>
-            <p>Copyright &copy; Crafted by <a href="https://archivetoken.net/">Archive Token</a>.</p>
+            <p>Copyright &copy; Crafted by <a href="https://archivetoken.net/">Archive Token</a>.</p> 
+
+            <form action="islemler/islem.php" method="POST" accept-charset="utf-8">
+            <select class="form-control" name="dil-secimi">
+              <option value="1">"Türkçe"</option>
+              <option value="2">English</option>
+              <option value="3">Deutsch</option>
+
+            </select>
+            </form>
           </div>
         </div>
       </div>

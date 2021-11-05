@@ -4,7 +4,22 @@ ob_start();
 include 'islemler/baglan.php';
 
 
-include 'diller/turkish.php';
+
+
+
+if(isset($_SESSION['dil'])){
+    $dil = $_SESSION['dil'];
+    if($dil == 1){
+        include 'diller/turkish.php';;
+    }
+    else if($dil == 2){
+        include 'diller/turkish.php';
+    }
+    else{
+        include 'diller/turkish.php';
+    }
+}
+
 
 
 
