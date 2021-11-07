@@ -143,7 +143,7 @@ alert("Cüzdan başarıyla eklendi!");
                                     echo strip_tags($cuzdan_adi." "."(".$isim_soyisim.")");
                                     
                                     ?></td>
-                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ARH"; ?>
+                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ".$birim; ?>
                                     </td>  
                                     <td><?php echo "$".strip_tags($row['odenen_tutar']) ?></td>
 									<td><?php echo strip_tags($row['tur']) ?></td>

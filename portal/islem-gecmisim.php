@@ -86,7 +86,7 @@ alert("Cüzdan başarıyla eklendi!");
 							<div class="card card-dark bg-primary-gradient">
 								<div class="card-body pb-0">
 									
-									 <h2 class="mb-2"><span class="fas fa-wallet"></span> <?php echo strip_tags($veri_cek['bakiye'])." ARH" ?></h2>
+									 <h2 class="mb-2"><span class="fas fa-wallet"></span> <?php echo strip_tags($veri_cek['bakiye'])." ".$birim ?></h2>
 									<p><?php echo $dil['cuzdan-bakiyesi'] ?></p>
 									
 								</div>
@@ -154,7 +154,7 @@ alert("Cüzdan başarıyla eklendi!");
                                     
                                     
                                     ?></td>
-                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ARH"; ?>
+                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ".$birim; ?>
                                     </td>  
                                     <td><?php echo "$".strip_tags($row['odenen_tutar']) ?></td>
 									<td><?php echo strip_tags($row['tur']) ?></td>

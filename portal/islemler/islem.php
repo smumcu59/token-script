@@ -218,7 +218,7 @@ if(isset($_POST['satin-alimi-onayla'])){
     $paket_kimligi = $_SESSION['paket_kimligi'];
     $paket_adedi = $_SESSION['paket_adedi'];
     date_default_timezone_set('Europe/Istanbul');
-    $tarih_saat = date('d/m/Y H:i:s');
+    echo $tarih_saat = date('d/m/Y H:i:s');
 
 
 
@@ -446,7 +446,7 @@ if(isset($_POST['parolami_unuttum'])){
     $_SESSION['smtp-alici-mail-adresi'] = $eposta;
     $_SESSION['smtp-mail-tipi'] = "parolami-sifirla";
 
-    echo $_SESSION['smtp-alici-mail-adresi'];
+    $_SESSION['smtp-alici-mail-adresi'];
 
     header("location:/islemler/mail-gonder");
     exit;

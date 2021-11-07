@@ -38,7 +38,7 @@ $paket_kazanci_3 = $veri_ceek['paket_kazanci'];
 if(isset($_SESSION['token-siniri-asildi'])){
   ?>
   <script type="text/javascript">
-  alert("Değerli müşteri; \nSistem üzerinde talep ettiğiniz token değeri sisteme adanan ön satış değerini aşmaktadır. Lütfen daha az token almayı deneyin. Sistem üzerinde satın alınabilir token sayısını öğrenmek için www.archivetoken.net adresini ziyaret edin.");
+  alert("Değerli müşteri; \nSistem üzerinde talep ettiğiniz token değeri sisteme adanan ön satış değerini aşmaktadır. Lütfen daha az token almayı deneyin. Sistem üzerinde satın alınabilir token sayısını öğrenmek için sitemizi ziyaret edin.");
    </script>
 <?php 
     unset($_SESSION['token-siniri-asildi']);
@@ -349,7 +349,7 @@ siyah
                 <h4><strong><?php echo $paket_adi_1 ?></strong></h4>
                 <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
-            <div class="price"><strong><?php echo $token_degeri_1 ?></strong> ARH + % <?php echo $paket_kazanci_1 ?> </div>
+            <div class="price"><strong><?php echo $token_degeri_1 ?></strong> <?php echo $birim ?> + % <?php echo $paket_kazanci_1 ?> </div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i> % <?php echo $paket_kazanci_1." ".$dil['fazladan-token-kazanin'] ?></li>
@@ -366,7 +366,7 @@ siyah
                 <h4><strong><?php echo $paket_adi_2 ?></strong></h4>
                 <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
-            <div class="price"><strong><?php echo $token_degeri_2 ?></strong> ARH + % <?php echo $paket_kazanci_2?></div>
+            <div class="price"><strong><?php echo $token_degeri_2 ?></strong> <?php echo $birim ?> + % <?php echo $paket_kazanci_2?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." ".$dil['fazladan-token-kazanin']  ?></li>
@@ -383,7 +383,7 @@ siyah
                 <h4><strong><?php echo $paket_adi_3 ?></strong></h4>
                 <p><?php echo $dil['fazladan-token-kazanin'] ?></p>
             </div>
-            <div class="price"><strong><?php echo $token_degeri_3 ?></strong> ARH + % <?php echo $paket_kazanci_3 ?></div>
+            <div class="price"><strong><?php echo $token_degeri_3 ?></strong> <?php echo $birim ?> + % <?php echo $paket_kazanci_3 ?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
                     <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." ".$dil['fazladan-token-kazanin'] ?></li>

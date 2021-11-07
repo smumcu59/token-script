@@ -1,9 +1,13 @@
 <?php 
 include 'islemler/baglan.php';
+ob_start();
+session_start();
 
 $veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
 $veriyi_alsinssspp->execute();
 $veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
 
 $toplam_satis = $veriyi_ceksinssspp['toplam_satis'];
 
@@ -11,23 +15,65 @@ $toplam_satista = $veriyi_ceksinssspp['on_satis_siniri'];
 
 $toplam_satilan_dolar = $toplam_satis*0.2;
 
+$sozlesme_adresi = $veriyi_ceksinssspp['sozlesme_adresi'];
+
 $toplam_satilacak_dolar = $toplam_satista*0.2;
 
 $ilerleme_cubugu_algoritmasi = $toplam_satis/25000;
 
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
+
+## Sayılar
+
+$platform = $veriyi_ceksinssspp['platform'];
+$on_satis_token = $veriyi_ceksinssspp['on_satis_token_degeri'];
+$danisman = $veriyi_ceksinssspp['danisman'];
+$toplam_token = $veriyi_ceksinssspp['toplam_token'];
+$borsa_isbirligi = $veriyi_ceksinssspp['borsa_isbirligi'];
+$odul = $veriyi_ceksinssspp['odul'];
+$on_satis_token_degeri = $veriyi_ceksinssspp['on_satis_token_degeri'];
+$kurucular_ekip = $veriyi_ceksinssspp['kurucular_ekip'];
+
+
+##
+
+
+
+
 
 
 if(isset($_SESSION['dil'])){
-    $dil = $_SESSION['dil'];
-    if($dil == 1){
+    $dil_secimi = $_SESSION['dil'];
+    if($dil_secimi== 1){
         include 'diller/turkish.php';
+        
     }
-    else if($dil == 2){
-        include 'diller/turkish.php';
+    else if($dil_secimi == 2){
+        include 'diller/english.php';
+        
     }
     else{
-        include 'diller/turkish.php';
+        include 'diller/german.php';
     }
+}
+else{
+  if($varsayilan_dil_id == 1){
+    include 'diller/turkish.php';
+  }
+  else if($varsayilan_dil_id == 2){
+    include 'diller/english.php';
+  }
+  else if($varsayilan_dil_id == 3){
+    include 'diller/german.php';
+  }
+  else{
+    include 'diller/turkish.php';
+  }
+  
+  
+  
 }
 
 ?>
@@ -38,7 +84,7 @@ if(isset($_SESSION['dil'])){
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Archive Token - Geçmişini Geleceğin İle Koru</title>
+    <title><?php echo $dil['title-yazisi'] ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -138,7 +184,7 @@ if(isset($_SESSION['dil'])){
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Navigasyon</span>
+                <span class="sr-only"><?php echo $dil['navigasyon'] ?></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -154,7 +200,7 @@ if(isset($_SESSION['dil'])){
                     <li><a onclick="smoothScroll(document.getElementById('intro'))"><b><?php echo $dil['token-nedir-header']; ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('faz'))"><b><?php echo $dil['faz-sistemi-header']; ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('zaman-cizelgesi'))"><b><?php echo $dil['yol-haritasi-header']; ?></b></a></li>
-                    <li><a onclick="smoothScroll(document.getElementById('token'))"><b>Archive Token</b></a></li>
+                    <li><a onclick="smoothScroll(document.getElementById('token'))"><b><?php echo $token_adi ?></b></a></li>
                     <li><a onclick="smoothScroll(document.getElementById('sss'))"><b><?php echo $dil['sss-header']; ?></b></a></li>
                     
                     <li><a href="giris-yap" class="d-flex btn proccess-bar-orange"><span class="fas fa-sign-in-alt"></span><b> <?php echo $dil['giris-yap-butonu']; ?></b></a></li>
@@ -174,7 +220,7 @@ if(isset($_SESSION['dil'])){
         <div class="row">
           <div class="col-md-10 col-md-offset-2">
             <div class="block">
-              <h1  class="animated fadeInUp"><b>ARCHIVE TOKEN </b></h1>
+              <h1  class="animated fadeInUp"><b><?php echo $token_adi ?> </b></h1>
               <p class="animated fadeInUp"><?php echo $dil['slider-yazisi']; ?></p>
               
                 
@@ -235,11 +281,11 @@ if(isset($_SESSION['dil'])){
            <div class="col-md-12 col-lg-12">
              <div class="row">
                <div class="col-md-6 col-lg-6">
-               <label><?php echo $dil['simdiye-kadar-yapilan-toplam-token-satisi']; ?> <?php echo $toplam_satis." ARH" ?> </label>
+               <label><?php echo $dil['simdiye-kadar-yapilan-toplam-token-satisi']; ?> <?php echo $toplam_satis." ".$birim ?> </label>
                </div>
                 
                 <div class="col-md-6 col-lg-6">
-                  <label><?php echo $dil['suanda-satista-olan-toplam-token'] ?> <?php echo $toplam_satista ?> ARH</label>
+                  <label><?php echo $dil['suanda-satista-olan-toplam-token'] ?> <?php echo $toplam_satista ?> <?php echo $birim ?></label>
                   </div>
                   
                     <div class="col-md-6 col-lg-6">
@@ -252,7 +298,7 @@ if(isset($_SESSION['dil'])){
                     </div>
                     <div class="col-md-12 col-lg-12">
                       <br>
-                    <label><h3>1 Archive Token = 0.2 $ </h3></label>
+                    <label><h3>1 <?php echo $token_adi ?> = 0.2 $ </h3></label>
                     </div>
                     
              </div>
@@ -364,7 +410,7 @@ if(isset($_SESSION['dil'])){
     <section class="section" id="zaman-cizelgesi">
     <div class="row">
           <center><div class="section-title">
-            <h2>Yol Haritamız</h2>
+            <h2><?php echo $dil['yol-haritamiz-yazi'] ?></h2>
             <p></p>
           </div> </center>
         </div>
@@ -396,10 +442,7 @@ if(isset($_SESSION['dil'])){
                                 <h3><?php echo $dil['yol-haritamiz-reklam-anlasmasi'] ?></h3>
                                 <p><?php echo $dil['yol-haritamiz-reklam-anlasmasi-aciklama'] ; ?></p>
                             </li>
-                            <li class="event" data-date="2022 <?php echo "(".$dil['yol-haritamiz-ceyrek-2'].")" ?>">
-                                <h3>Sonraki Adımlar</h3>
-                                <p>Belirlenen hedeflerden birinin gerçekleştirilmesi.</p>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -416,18 +459,18 @@ if(isset($_SESSION['dil'])){
     
     <section class="section" id="token">
       <center><div class="section-title">
-        <h2><br> Archive Token</h2>
+        <h2><br> <?php echo $token_adi ?></h2>
       </div> </center>
       <div class="container" id="">
         <div class="row" style="background-color:#ffffff; padding:20px;">
           <div class="left-text col-lg-5 col-md-12 col-sm-12 mobile-bottom-fix">
             <div class="left-heading">
-              <h5>Archive Token</h5>
+              <h5><b><?php echo $token_adi ?></b></h5>
             </div>
             <p><?php echo $dil['token-yol-haritasi-alti-aciklama'] ?> </p>
             <p><b><?php echo $dil['sozlesme-adresi'] ?>  :</b></p>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input_outer">
-              <input type="text" class="form-control" value="0x857a645053ef69490682c98a2cac91436ce2ec74" disabled="">
+              <input type="text" class="form-control" value="<?php echo $sozlesme_adresi ?>" disabled="">
             </div>
             <p><small>Link: <a href="#">Binance Smart Chain</a></small></p>
             <!--<p style="margin-top:-20px;"><b>Para Havuzu  :</b></p>
@@ -442,43 +485,40 @@ if(isset($_SESSION['dil'])){
               <tbody>
                 <tr>
                   <th scope="row"><?php echo $dil['sembol'] ?></th>
-                  <td>ARH</td>
+                  <td><?php echo $birim ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['token_isim']; ?></th>
-                  <td>ARCHIVE</td>
+                  <td><?php echo $token_adi ?></td>
                 </tr>
                 <tr>
                   <th scope="row">Platform</th>
-                  <td>Binance Smart Chain</td>
+                  <td><?php echo $platform ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['toplam-token'] ?></th>
-                  <td>100.000.000 ARH</td>
+                  <td><?php echo $toplam_token ?> <?php echo $birim ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['on-satis-token'] ?></th>
-                  <td>10.000.000 ARH</td>
+                  <td><?php echo $on_satis_token ?> <?php echo $birim ?></td>
                 </tr>
-                <tr>
-                  <th scope="row"><?php echo $dil['on-satis'];  ?> </th>
-                  <td>10.000.000 ARH</td>
-                </tr>
+               
                 <tr>
                   <th scope="row"><?php echo $dil['borsa-ve-isbirligi']; ?></th>
-                  <td>65.000.000 ARH</td>
+                  <td><?php echo $borsa_isbirligi ?> <?php echo $birim ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['kurucular-ve-ekip'];  ?> </th>
-                  <td>10.000.000 ARH</td>
+                  <td><?php echo $kurucular_ekip ?> <?php echo $birim ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['danismanlar']; ?> </th>
-                  <td>10.000.000 ARH</td>
+                  <td><?php echo $danisman ?> <?php echo $birim ?></td>
                 </tr>
                 <tr>
                   <th scope="row"><?php echo $dil['odul']  ?></th>
-                  <td>5.000.000 ARH</td>
+                  <td><?php echo $odul ?> <?php echo $birim ?></td>
                 </tr>
                 <!--<tr>
                   <th scope="row">Softcap</th>
@@ -553,7 +593,7 @@ if(isset($_SESSION['dil'])){
               
             </div>
             <div class="col-md-3 col-lg-3">
-              <label><baslik><?php echo $dil['big-eposta-adresi'] ?> : destek@archivetoken.net</baslik></label>
+              <label><baslik><?php echo $dil['big-eposta-adresi'] ?> : mailadresi@gmail.com</baslik></label>
             </div>
             <div class="col-md-3 col-lg-3 pull-right">
               <br>
@@ -596,11 +636,12 @@ if(isset($_SESSION['dil'])){
                 <li><a href="#"><b>Terms</b></a></li>
               </ul>
             </div>
-            <p>Copyright &copy; Crafted by <a href="https://archivetoken.net/">Archive Token</a>.</p> 
+            <p>Copyright &copy; Crafted by <a href="https://archivetoken.net/"><?php echo $token_adi ?></a>.</p> 
 
             <form action="islemler/islem.php" method="POST" accept-charset="utf-8">
-            <select class="form-control" name="dil-secimi">
-              <option value="1">"Türkçe"</option>
+            <select class="form-control" name="dil-secimi" onchange="this.form.submit()">
+              <option disabled selected>DİL SEÇİMİ</option>
+              <option value="1">Türkçe</option>
               <option value="2">English</option>
               <option value="3">Deutsch</option>
 

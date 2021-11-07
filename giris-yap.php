@@ -4,13 +4,19 @@ ob_start();
 include 'portal/islemler/baglan.php';
 
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+
 
 if(isset($_SESSION['dil'])){
-    $dil = $_SESSION['dil'];
-    if($dil == 1){
+    $dil_secimi = $_SESSION['dil'];
+    if($dil_secimi == 1){
         include 'portal/diller/turkish.php';
     }
-    else if($dil == 2){
+    else if($dil_secimi == 2){
         include 'portal/diller/english.php';
     }
     else{
@@ -18,8 +24,22 @@ if(isset($_SESSION['dil'])){
     }
 }
 else{
-    include 'portal/diller/turkish.php';
-}
+    if($varsayilan_dil_id == 1){
+      include 'portal/diller/turkish.php';
+    }
+    else if($varsayilan_dil_id == 2){
+      include 'portal/diller/english.php';
+    }
+    else if($varsayilan_dil_id == 3){
+      include 'portal/diller/german.php';
+    }
+    else{
+      include 'portal/diller/turkish.php';
+    }
+    
+    
+    
+  }
  
 
 
@@ -33,6 +53,17 @@ if (isset($_SESSION['kayıt-basarili'])){
     EOF;
     unset($_SESSION['kayıt-basarili']);
 }
+
+if (isset($_SESSION['mail-basariyla-gonderildi'])){
+    echo <<<EOF
+    <div class="alert alert-success" role="alert">
+    Parola sıfırlama maili başarıyla gönderildi! Spam kutusuna bakmayı unutmayın!
+    </div>
+    EOF;
+    unset($_SESSION['mail-basariyla-gonderildi']);
+}
+
+
 
 ?>
 
@@ -96,7 +127,7 @@ if (isset($_SESSION['kayıt-basarili'])){
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                name="parola" placeholder="<?php $dil['parola-girin'] ?>" required>
+                                                name="parola" placeholder="<?php echo $dil['parola-girin'] ?>" required>
                                         </div>
                                        
                                         

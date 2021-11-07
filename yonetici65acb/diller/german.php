@@ -1,4 +1,13 @@
 <?php
+
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
 ## Bekleyen iade talepleri
 
 $dil['bekleyen-iade-talepleri-baslik'] = "Bekleyen İade Talepleri";
@@ -13,10 +22,22 @@ $dil['geri-don-buton'] = "Geri dön";
 
 ##
 
-## Yönetici girişi
+## Token ayarları (Son eklemeler)
 
-$dil['yonetici-giris-baslik'] = "Yönetici Kontrol Paneli - Giriş Yap";
+$dil['token-birimi'] = "Token Birimi";
+$dil['token-adi'] = "Token Adı";
+$dil['varsayilan-dil-secimi'] = "Varsayılan Dil";
 
+
+
+##
+
+$dil['sozlesme-adresi'] = "Sözleşme Adresi";
+
+## Ön yüz ayarları
+
+$dil['on-yuz-ayarlari-baslik'] = "Ön Yüz Ayarları";
+$dil['yapilandirma-ayarlari'] = "Yapılandırma Hataları";
 
 
 ##
@@ -33,6 +54,19 @@ $dil['aktif-cuzdan-metin'] = "Aktif Cüzdan";
 $dil['devre-disi-cuzdan-metin'] = "Devre Dışı Cüzdan";
 
 ##
+## Yönetici girişi
+
+$dil['yonetici-giris-baslik'] = "Yönetici Kontrol Paneli - Giriş Yap";
+
+
+
+##
+## Giriş yap sayfası
+
+$dil['giris-yap-baslik'] = "Sisteme Giriş Yap";
+$dil['giris-yap-buton'] = "Giriş Yap";
+$dil['kayit-ol'] = "Kayıt Ol";
+##
 
 ## Cüzdanı düzenle
 
@@ -43,6 +77,8 @@ $dil['cuzdan-adi'] = "Cüzdan Adı (Cüzdanınızı diğer cüzdanlarınızdan a
 $dil['cuzdan-adi-girin'] = "Cüzdan adı giriniz...";
 $dil['cuzdani-guncelle-buton'] = "Cüzdanı Güncelle";
 $dil['cuzdan-listesine-geri-don-buton'] = "Cüzdan Listesine Geri Dön";
+
+
 
 
 
@@ -75,7 +111,7 @@ $dil['arkaplan'] = "Arkaplan";
 ##
 
 ## Header 
-$dil['header-baslik'] = "Archive Token - Geçmişini Geleceğin İle Koru";
+$dil['header-baslik'] = $token_adi." - Geçmişini Geleceğin İle Koru";
 $dil['parolami-degistir'] = "Parolamı Değiştir";
 $dil['cikis-yap'] = "Çıkış Yap";
 $dil['sistem-yoneticisi-metin'] = "Sistem Yöneticisi";

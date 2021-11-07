@@ -137,7 +137,7 @@ alert("Üye başarıyla silindi!");
                                     echo strip_tags($veriyi_ceksinsssp['isim_soyisim']);
                                     
                                     ?></td>
-                                    <td><?php echo strip_tags($row['bakiye'])." ARH" ?></td>
+                                    <td><?php echo strip_tags($row['bakiye'])." ".$birim ?></td>
                                     
                                     
                                     

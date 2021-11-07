@@ -1,14 +1,20 @@
 <?php
 session_start();
 ob_start();
+
 include 'yonetici65acb/islemler/baglan.php';
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
 
 if(isset($_SESSION['dil'])){
-    $dil = $_SESSION['dil'];
-    if($dil == 1){
+    $dil_secimi = $_SESSION['dil'];
+    if($dil_secimi == 1){
         include 'yonetici65acb/diller/turkish.php';
     }
-    else if($dil == 2){
+    else if($dil_secimi == 2){
         include 'yonetici65acb/diller/english.php';
     }
     else{
@@ -16,9 +22,22 @@ if(isset($_SESSION['dil'])){
     }
 }
 else{
-    include 'yonetici65acb/diller/turkish.php';
+    if($varsayilan_dil_id == 1){
+      include 'yonetici65acb/diller/turkish.php';
+    }
+    else if($varsayilan_dil_id == 2){
+      include 'yonetici65acb/diller/english.php';
+    }
+    else if($varsayilan_dil_id == 3){
+      include 'yonetici65acb/diller/german.php';
+    }
+    else{
+      include 'yonetici65acb/diller/turkish.php';
+    }
     
-}
+    
+    
+  }
  
 
 

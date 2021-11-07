@@ -158,7 +158,7 @@ alert("Ön satış için belirlenen değer aşıldığı için işlem iptal edil
                                     
                                     
                                     ?></td>
-                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ARH"; ?>
+                                    <td><?php echo strip_tags($row['yatirilacak_token'])." ".$birim; ?>
                                     </td>  
                                     <td><?php echo "$".strip_tags($row['odenen_tutar']) ?></td>
 									

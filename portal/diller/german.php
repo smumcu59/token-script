@@ -1,7 +1,15 @@
 <?php 
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
 ## Giriş yap
-$dil['giris-yap-baslik'] = "Archive Token Kunden-Login";
+$dil['giris-yap-baslik'] = $token_adi." Kunden-Login";
 $dil['e-posta-girin'] = "Geben sie ihre E-Mailadresse ein...";
 $dil['parola-girin'] = "Geben Sie Ihr Passwort ein...";
 $dil['giris-yap-buton'] = "Anmeldung";
@@ -10,15 +18,24 @@ $dil['kayit-ol'] = "Registrieren";
 
 ##
 
+## Parolamı unuttum
+
+$dil['parolami-unuttum-baslik'] = "Parolamı Unuttum Sayfası";
+$dil['parolami-unuttum-gonder'] = "Mail Gönder";
+
+##
+
 ## Kayıt ol ekranı
 
-$dil['kayit-ol-baslik'] = "Archive Token - Müşteri Kaydı";
+$dil['kayit-ol-baslik'] = $token_adi." - Müşteri Kaydı";
 $dil['kayit-ol-isim-soyisim'] = "İsminizi ve Soyisminizi giriniz...";
 $dil['referans-kullanici-mail'] = "Referanslı kullanıcı mail adresini giriniz...";
 $dil['kayit-ol-buton'] = "Sisteme kayıt ol";
 $dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yap!";
 
 ##
+
+$dil['fazladan-token-hediye'] = "Fazladan token hediye!!";
 
 
 ## Müşteri paneli 
@@ -33,10 +50,10 @@ $dil['cuzdanim-header'] = "Mein Geldbeutel";
 $dil['islem-gecmisim-header'] = "Mein Transaktionsverlauf";
 $dil['iade-talepleri-header'] = "Rücksendeanfragen";
 ## İndex
-$dil['token-satin-al'] = "Archive-Token kaufen";
+$dil['token-satin-al'] = $token_adi." kaufen";
 $dil['on-satis'] = "Vorverkauf";
 $dil['paket-secin'] = "Paket wählen";
-$dil['istedigin-kadar-token-satin-al'] = "Kaufen Sie so viele ARHs wie Sie möchten!";
+$dil['istedigin-kadar-token-satin-al'] = "Kaufen Sie so viele ".$birim."s wie Sie möchten!";
 $dil['yedi-yirmidort-destek'] = "Erhalten Sie Support 24 Stunden, 7 Tage am Tag!";
 $dil['teknik-destek-iade-garantisi'] = "Rückgaberecht bei technischen Störungen.";
 $dil['adet'] = "Nummer";
@@ -109,9 +126,9 @@ $dil['satin-alim-islemi'] = "Kaufprozess";
 $dil['secimlerim'] = "Meine Entscheidungen";
 $dil['tek-paket-fiyati'] = "Einzelpaketpreis";
 $dil['toplam-tutar'] = "Gesamtsumme";
-$dil['hediyesiz-toplam-token'] = "Kein Geschenk Gesamt ARH";
-$dil['hediye-edilen-toplam-token'] = "Gesamt ARH Begabt";
-$dil['hesaba-yatacak-toplam-token'] = "Zu hinterlegende Gesamt-ARH";
+$dil['hediyesiz-toplam-token'] = "Kein Geschenk Gesamt ".$birim."";
+$dil['hediye-edilen-toplam-token'] = "Gesamt ".$birim." Begabt";
+$dil['hesaba-yatacak-toplam-token'] = "Zu hinterlegende Gesamt-".$birim."";
 $dil['islem-kimligi'] = "Transaktions-ID (TxId)";
 $dil['iade-cuzdaniniz'] = "Ihre Retouren-Brieftasche";
 $dil['islem-kimligi-aciklama'] = "Geben Sie die Transaktions-ID (TXID) ein...";

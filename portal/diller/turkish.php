@@ -1,7 +1,15 @@
 <?php 
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
 ## Giriş yap
-$dil['giris-yap-baslik'] = "Archive Token Müşteri Girişi";
+$dil['giris-yap-baslik'] = $token_adi." Müşteri Girişi";
 $dil['e-posta-girin'] = "Elektronik posta adresinizi girin...";
 $dil['parola-girin'] = "Parolanızı girin...";
 $dil['giris-yap-buton'] = "Giriş Yap";
@@ -12,13 +20,15 @@ $dil['kayit-ol'] = "Kayıt Ol";
 
 ## Kayıt ol ekranı
 
-$dil['kayit-ol-baslik'] = "Archive Token - Müşteri Kaydı";
+$dil['kayit-ol-baslik'] = $token_adi." - Müşteri Kaydı";
 $dil['kayit-ol-isim-soyisim'] = "İsminizi ve Soyisminizi giriniz...";
 $dil['referans-kullanici-mail'] = "Referanslı kullanıcı mail adresini giriniz...";
 $dil['kayit-ol-buton'] = "Sisteme kayıt ol";
 $dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yap!";
 
 ##
+
+$dil['fazladan-token-hediye'] = "Fazladan token hediye!!";
 
 
 ## Müşteri paneli 
@@ -33,10 +43,10 @@ $dil['cuzdanim-header'] = "Cüzdanım";
 $dil['islem-gecmisim-header'] = "İşlem Geçmişim";
 $dil['iade-talepleri-header'] = "İade Talepleri";
 ## İndex
-$dil['token-satin-al'] = "Archive Token Satın Al";
+$dil['token-satin-al'] = $token_adi." Satın Al";
 $dil['on-satis'] = "Ön Satış";
 $dil['paket-secin'] = "Paket Seçin";
-$dil['istedigin-kadar-token-satin-al'] = "İstediğin kadar ARH satın al!";
+$dil['istedigin-kadar-token-satin-al'] = "İstediğin kadar ".$birim." satın al!";
 $dil['yedi-yirmidort-destek'] = "7 Gün 24 Saat Destek Al!";
 $dil['teknik-destek-iade-garantisi'] = "Teknik arızalara karşı iade politikası.";
 $dil['adet'] = "Adet";
@@ -109,9 +119,9 @@ $dil['satin-alim-islemi'] = "Satın Alım İşlemi";
 $dil['secimlerim'] = "Seçimlerim";
 $dil['tek-paket-fiyati'] = "Tek Paket Fiyatı";
 $dil['toplam-tutar'] = "Toplam Tutar";
-$dil['hediyesiz-toplam-token'] = "Hediyesiz Toplam ARH";
-$dil['hediye-edilen-toplam-token'] = "Hediye Edilen Toplam ARH";
-$dil['hesaba-yatacak-toplam-token'] = "Hesaba Yatırılacak Toplam ARH";
+$dil['hediyesiz-toplam-token'] = "Hediyesiz Toplam ".$birim."";
+$dil['hediye-edilen-toplam-token'] = "Hediye Edilen Toplam ".$birim."";
+$dil['hesaba-yatacak-toplam-token'] = "Hesaba Yatırılacak Toplam ".$birim."";
 $dil['islem-kimligi'] = "İşlem Kimliği (TxId)";
 $dil['iade-cuzdaniniz'] = "İade Cüzdanınız";
 $dil['islem-kimligi-aciklama'] = "İşlem kimliğini (TXID) giriniz...";
@@ -148,6 +158,13 @@ $dil['basvuruyu-gonder'] = "Başvuruyu Gönder";
 
 ##
 
+
+## Parolamı unuttum
+
+$dil['parolami-unuttum-baslik'] = "Parolamı Unuttum Sayfası";
+$dil['parolami-unuttum-gonder'] = "Mail Gönder";
+
+##
 
 
 

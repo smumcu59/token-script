@@ -3,23 +3,43 @@ session_start();
 ob_start();
 include 'islemler/baglan.php';
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+
 
 
 if(isset($_SESSION['dil'])){
-    $dil = $_SESSION['dil'];
-    if($dil == 1){
-        include 'yonetici65acb/diller/turkish.php';
+    $dil_secimi = $_SESSION['dil'];
+    if($dil_secimi == 1){
+        include 'diller/turkish.php';
     }
-    else if($dil == 2){
-        include 'yonetici65acb/diller/english.php';
+    else if($dil_secimi == 2){
+        include 'diller/english.php';
     }
     else{
-        include 'yonetici65acb/diller/german.php';
+        include 'diller/german.php';
     }
 }
 else{
-	include 'yonetici65acb/diller/turkish.php';
-}
+    if($varsayilan_dil_id == 1){
+      include 'diller/turkish.php';
+    }
+    else if($varsayilan_dil_id == 2){
+      include 'diller/english.php';
+    }
+    else if($varsayilan_dil_id == 3){
+      include 'diller/german.php';
+    }
+    else{
+      include 'diller/turkish.php';
+    }
+    
+    
+    
+  }
 
 
 
@@ -340,6 +360,11 @@ if($_SESSION["yonetici-oturumu"]=="1") {
 									<li>
 										<a href="token-ayarlari">
 											<span class="sub-item"><?php echo $dil['token-ayarlari-metin'] ?></span>
+										</a>
+									</li>
+									<li>
+										<a href="on-yuz-ayarlari">
+											<span class="sub-item"><?php echo $dil['on-yuz-ayarlari-baslik'] ?></span>
 										</a>
 									</li>
 									<li>

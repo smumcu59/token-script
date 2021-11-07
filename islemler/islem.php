@@ -16,6 +16,7 @@ if(isset($_POST['dil-secimi'])){
 		$_SESSION['dil'] = 3;
 	}
 	header("location:../index");
+	echo $_SESSION['dil'];
 	exit;
 }
 

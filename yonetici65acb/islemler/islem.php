@@ -779,9 +779,12 @@ if(isset($_POST['ayarlari-guncelle'])){
     $sinir = $_POST['sinir'];
     $cuzdan_kimligi = $_POST['cuzdan_kimligi'];
     $referans_kazanci = $_POST['kazanc_orani'];
+    $token_birimi = $_POST['token_birimi'];
+    $token_adi = $_POST['token_adi'];
+    $dil_secimi = $_POST['dil-secimi'];
 
-    $veriyi_alsinsssp = $db->prepare("UPDATE token_ayarlari SET on_satis_siniri=:on_satis_siniri,cuzdan_kimligi=:cuzdan_kimligi,referans_kazanci=:referans_kazanci WHERE id=1");
-    $veriyi_alsinsssp->execute(array(':on_satis_siniri' =>$sinir,':cuzdan_kimligi' =>$cuzdan_kimligi,':referans_kazanci' =>$referans_kazanci));
+    $veriyi_alsinsssp = $db->prepare("UPDATE token_ayarlari SET on_satis_siniri=:on_satis_siniri,cuzdan_kimligi=:cuzdan_kimligi,referans_kazanci=:referans_kazanci,token_birimi=:token_birim,token_adi=:token_ad,varsayilan_dil_id=:dil_id WHERE id=1");
+    $veriyi_alsinsssp->execute(array(':on_satis_siniri' =>$sinir,':cuzdan_kimligi' =>$cuzdan_kimligi,':referans_kazanci' =>$referans_kazanci,':token_birim' =>$token_birimi,':token_ad' =>$token_adi,':dil_id' =>$dil_secimi));
     $veriyi_ceksinsssp = $veriyi_alsinsssp->fetch(PDO::FETCH_ASSOC);
 
     $_SESSION['ayarlar-basariyla-guncellendi'] = 1;
@@ -917,5 +920,35 @@ if(isset($_POST['parolayi-guncelle'])){
     
    
 }
+
+##
+
+#
+
+
+## Ayarları güncelleme işlemi
+
+if(isset($_POST['ayarlari-guncelle-on-yuz'])){
+    echo $platform = $_POST['platform'];
+    echo $toplam_token = $_POST['toplam_token'];
+    echo $on_satis_token_degeri = $_POST['on_satis_token_degeri'];
+    
+    echo $borsa_isbirligi = $_POST['borsa_isbirligi'];
+    echo $kurucular_ekip = $_POST['kurucular_ekip'];
+    echo $danisman = $_POST['danisman'];
+    echo $odul = $_POST['odul'];
+
+    $veriyi_alsinsssp = $db->prepare("UPDATE token_ayarlari SET platform=?,danisman=?,toplam_token=?,borsa_isbirligi=?,odul=?,on_satis_token_degeri=?,kurucular_ekip=? WHERE id=1");
+    $veriyi_alsinsssp->execute(array($platform,$danisman,$toplam_token,$borsa_isbirligi,$odul,$on_satis_token_degeri,$kurucular_ekip));
+    $veriyi_ceksinsssp = $veriyi_alsinsssp->fetch(PDO::FETCH_ASSOC);
+
+    $_SESSION['ayarlar-basariyla-guncellendi'] = 1;
+    header("location:../on-yuz-ayarlari");
+    exit;
+
+
+}
+
+
 
 ##

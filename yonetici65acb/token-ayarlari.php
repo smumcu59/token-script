@@ -1,18 +1,26 @@
 <?php include 'header.php'; 
 
-$yonetici_id = $_SESSION['duzenlenecek-yonetici-id'];
 
-$veriyi_alll = $db->prepare("SELECT * from token_ayarlari");
-$veriyi_alll->execute(array($yonetici_id));
+
+$veriyi_alll = $db->prepare("SELECT * from token_ayarlari WHERE id=1");
+$veriyi_alll->execute();
 $veri_cekk = $veriyi_alll->fetch(PDO::FETCH_ASSOC);
 
 $on_satis_siniri = $veri_cekk['on_satis_siniri'];
 $cuzdan_kimligi = $veri_cekk['cuzdan_kimligi'];
 $referans_orani = $veri_cekk['referans_kazanci'];
+$token_birimi = $veri_cekk['token_birimi'];
+$token_adi = $veri_cekk['token_adi'];
+$varsayilan_dil_id = $veri_cekk['varsayilan_dil_id'];
+$sozlesme_adresi = $veri_cekk['sozlesme_adresi'];
 
 
 
 $connect->set_charset("utf8");
+
+
+$queryy ="SELECT * FROM diller";  
+$resultt = mysqli_query($connect, $queryy);
 
 
 
@@ -90,6 +98,30 @@ alert("Token Ayarları Başarıyla Güncellendi!");
 
                         <div class="row">
                         <div class="col-md-4 col-lg-4">
+                        <label class="from tarih_saat"><?php echo $dil['token-birimi'] ?></label>
+                        <input type="text" class="form-control form-control" id="siyah" name="token_birimi" required value="<?php echo strip_tags($token_birimi) ?>">
+                        
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                        <label class="from tarih_saat"><?php echo $dil['token-adi'] ?></label>
+                        <input type="text" class="form-control form-control" id="siyah" name="token_adi" required value="<?php echo strip_tags($token_adi) ?>">
+                        
+                        </div>
+                        <div class="col-md-4 col-lg-4">
+                        <label class="from tarih_saat"><?php echo $dil['varsayilan-dil-secimi'] ?></label>
+                        <select name="dil-secimi" class="form-control" required>
+                        <option disabled selected>--SEÇİM YAPIN--</option>
+                        <?php
+                        while($row = mysqli_fetch_array($resultt))  {
+
+                            ?>
+                            <option value="<?php echo $row['id'] ?>"><?php echo $row['dil_adi'] ?></option>
+                            <?php } ?>
+                        </select>
+                        
+                        
+                        </div>
+                        <div class="col-md-4 col-lg-4">
                         <label class="from tarih_saat"><?php echo $dil['on-satis-token-siniri'] ?></label>
                         <input type="text" class="form-control form-control" id="siyah" name="sinir" required value="<?php echo strip_tags($on_satis_siniri) ?>">
                         <br>
@@ -101,11 +133,17 @@ alert("Token Ayarları Başarıyla Güncellendi!");
                         
                         </div>
                         <div class="col-md-4 col-lg-4">
-                        <label class="from tarih_saat"><?php echo $dil['referans-kazanc-orani'] ?></label>
-                        <input type="text" class="form-control form-control" id="siyah" name="kazanc_orani" required value="<?php echo strip_tags($referans_orani) ?>">
-                        <br>
+                        <label class="from tarih_saat"><?php echo $dil['sozlesme-adresi'] ?></label>
+                        <input type="text" class="form-control form-control" id="siyah" name="sozlesme_adresi" required value="<?php echo strip_tags($sozlesme_adresi) ?>">
                         
                         </div>
+                        <div class="col-md-4 col-lg-4">
+                        <label class="from tarih_saat"><?php echo $dil['referans-kazanc-orani'] ?></label>
+                        <input type="text" class="form-control form-control" id="siyah" name="kazanc_orani" required value="<?php echo strip_tags($referans_orani) ?>">
+                        
+                        
+                        </div>
+                        <div class="col-md-8 col-lg-8"></div>
                         
                         <div class="col-md-2 col-lg-2">
                         <br> <br>

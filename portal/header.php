@@ -3,16 +3,24 @@ session_start();
 ob_start();
 include 'islemler/baglan.php';
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
 
 
 
 
 if(isset($_SESSION['dil'])){
-    $dil = $_SESSION['dil'];
-    if($dil == 1){
+    $dil_secimi = $_SESSION['dil'];
+    if($dil_secimi == 1){
         include 'diller/turkish.php';;
     }
-    else if($dil == 2){
+    else if($dil_secimi == 2){
         include 'diller/english.php';
     }
     else{
@@ -20,8 +28,22 @@ if(isset($_SESSION['dil'])){
     }
 }
 else{
-	include 'diller/turkish.php';
-}
+    if($varsayilan_dil_id == 1){
+      include 'diller/turkish.php';
+    }
+    else if($varsayilan_dil_id == 2){
+      include 'diller/english.php';
+    }
+    else if($varsayilan_dil_id == 3){
+      include 'diller/german.php';
+    }
+    else{
+      include 'diller/turkish.php';
+    }
+    
+    
+    
+  }
 
 
 
@@ -62,7 +84,7 @@ if($_SESSION["uye-oturumu"]=="1") {
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Archive Token - <?php echo $dil['gecmisini-gelecegin-ile-koru-title'] ?></title>
+	<title><?php echo $token_adi ?> - <?php echo $dil['gecmisini-gelecegin-ile-koru-title'] ?></title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="assets/img/icon.ico" type="image/x-icon"/>
 
@@ -165,7 +187,7 @@ if($_SESSION["uye-oturumu"]=="1") {
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
 									<?php echo $veri_cek['isim_soyisim']; ?>
-									<span class="user-level"><?php echo $dil['token-bakiyesi-profil']  ?>  <?php echo $veri_cek['bakiye']; ?> ARH</span>
+									<span class="user-level"><?php echo $dil['token-bakiyesi-profil']  ?>  <?php echo $veri_cek['bakiye']; ?> <?php echo $birim ?></span>
 									
 									<span class="caret"></span>
 								</span>

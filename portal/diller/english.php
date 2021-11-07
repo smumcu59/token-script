@@ -1,7 +1,15 @@
 <?php 
 
+$veriyi_alsinssspp = $db->prepare("SELECT * FROM token_ayarlari");
+$veriyi_alsinssspp->execute();
+$veriyi_ceksinssspp = $veriyi_alsinssspp->fetch(PDO::FETCH_ASSOC);
+
+$varsayilan_dil_id = $veriyi_ceksinssspp['varsayilan_dil_id'];
+$token_adi = $veriyi_ceksinssspp['token_adi'];
+$birim = $veriyi_ceksinssspp['token_birimi'];
+
 ## Giriş yap - Login Page
-$dil['giris-yap-baslik'] = "Archive Token Customer Login";
+$dil['giris-yap-baslik'] = $token_adi." Customer Login";
 $dil['e-posta-girin'] = "Enter your e-mail address...";
 $dil['parola-girin'] = "Enter your password...";
 $dil['giris-yap-buton'] = "Login";
@@ -12,11 +20,18 @@ $dil['kayit-ol'] = "Register";
 
 ## Kayıt ol ekranı
 
-$dil['kayit-ol-baslik'] = "Archive Token - Müşteri Kaydı";
+$dil['kayit-ol-baslik'] = $token_adi." - Müşteri Kaydı";
 $dil['kayit-ol-isim-soyisim'] = "İsminizi ve Soyisminizi giriniz...";
 $dil['referans-kullanici-mail'] = "Referanslı kullanıcı mail adresini giriniz...";
 $dil['kayit-ol-buton'] = "Sisteme kayıt ol";
 $dil['zaten-bir-hesabin-mi-var'] = "Zaten bir hesabın mı var? Giriş yap!";
+
+##
+
+## Parolamı unuttum
+
+$dil['parolami-unuttum-baslik'] = "Forgot Password Page";
+$dil['parolami-unuttum-gonder'] = "SEND MAİL";
 
 ##
 
@@ -33,14 +48,16 @@ $dil['cuzdanim-header'] = "My Wallet";
 $dil['islem-gecmisim-header'] = "My Transaction History";
 $dil['iade-talepleri-header'] = "Return Requests";
 ## İndex
-$dil['token-satin-al'] = "Buy Archive Tokens";
+$dil['token-satin-al'] = "Buy ".$token_adi."";
 $dil['on-satis'] = "Pre-Sale";
 $dil['paket-secin'] = "Select Package";
-$dil['istedigin-kadar-token-satin-al'] = "Buy as many ARHs as you want!";
+$dil['istedigin-kadar-token-satin-al'] = "Buy as many ".$birim." s as you want!";
 $dil['yedi-yirmidort-destek'] = "Get Support 24 Hours, 7 Days a Day!";
 $dil['teknik-destek-iade-garantisi'] = "Return policy against technical malfunctions.";
 $dil['adet'] = "Number";
 $dil['satin-al'] = "Buy";
+
+$dil['fazladan-token-hediye'] = "Fazladan token hediye!!";
 
 ## Bitiş
 
@@ -109,9 +126,9 @@ $dil['satin-alim-islemi'] = "Purchase Process";
 $dil['secimlerim'] = "My choices";
 $dil['tek-paket-fiyati'] = "Single Package Price";
 $dil['toplam-tutar'] = "Total amount";
-$dil['hediyesiz-toplam-token'] = "No Gift Total ARH";
-$dil['hediye-edilen-toplam-token'] = "Total ARH Gifted";
-$dil['hesaba-yatacak-toplam-token'] = "Total ARH to be Deposited";
+$dil['hediyesiz-toplam-token'] = "No Gift Total ".$birim."";
+$dil['hediye-edilen-toplam-token'] = "Total ".$birim." Gifted";
+$dil['hesaba-yatacak-toplam-token'] = "Total ".$birim." to be Deposited";
 $dil['islem-kimligi'] = "Transaction ID (TxId)";
 $dil['iade-cuzdaniniz'] = "Your Returns Wallet";
 $dil['islem-kimligi-aciklama'] = "Enter the Transaction ID (TXID)...";

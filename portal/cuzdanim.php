@@ -107,7 +107,7 @@ if(isset($_SESSION['duzenleme_islemi_basarili'])){
 							<div class="card card-dark bg-primary-gradient">
 								<div class="card-body pb-0">
 									
-									 <h2 class="mb-2"><span class="fas fa-wallet"></span> <?php echo $veri_cek['bakiye']." ARH" ?></h2>
+									 <h2 class="mb-2"><span class="fas fa-wallet"></span> <?php echo $veri_cek['bakiye']." ".$birim ?></h2>
 									<p><?php echo $dil['cuzdan-bakiyesi'] ?></p>
 									
 								</div>

@@ -46,7 +46,7 @@ if($mail_tipi == "parolami-sifirla"){
         $veriyi_ceksinsssp = $veriyi_alsinsssp->fetch(PDO::FETCH_ASSOC);
 
         $konu = 'Archive Token Parola Sıfırlama İşlemi';
-        $icerik = 'Parola Sıfırlama Kodunuz : https://archivetoken.net/sifirla?dogrulama='.$sifrelendi."&id=".$uye_id;
+        $icerik = 'Parola Sıfırlama Kodunuz : https://archive.tikokul.ml/sifirla?dogrulama='.$sifrelendi."&id=".$uye_id;
 
     } else {
         $_SESSION['veritabaninda-mail-yok'] = 1;

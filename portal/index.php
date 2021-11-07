@@ -347,12 +347,12 @@ siyah
             <div class="pricing-table-header">
             
                 <h4><strong><?php echo strip_tags($paket_adi_1) ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-hediye'] ?></p>
             </div>
-            <div class="price"><strong><?php echo strip_tags($token_degeri_1) ?></strong> ARH + % <?php echo strip_tags($paket_kazanci_1) ?> </div>
+            <div class="price"><strong><?php echo strip_tags($token_degeri_1) ?></strong> <?php echo $birim ?> + % <?php echo strip_tags($paket_kazanci_1) ?> </div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i> % <?php echo strip_tags($paket_kazanci_1)." fazladan ARH hediye!" ?></li>
+                    <li><i class="fa fa-donate"></i> % <?php echo strip_tags($paket_kazanci_1)." ".$dil['fazladan-token-hediye'] ?></li>
                     <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
@@ -364,12 +364,12 @@ siyah
         <div class="pricing-table-3 premium">
             <div class="pricing-table-header">
                 <h4><strong><?php echo $paket_adi_2 ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-hediye'] ?></p>
             </div>
-            <div class="price"><strong><?php echo $token_degeri_2 ?></strong> ARH + % <?php echo $paket_kazanci_2?></div>
+            <div class="price"><strong><?php echo $token_degeri_2 ?></strong> <?php echo $birim ?> + % <?php echo $paket_kazanci_2?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." fazladan ARH hediye!" ?></li>
+                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_2." ".$dil['fazladan-token-hediye'] ?></li>
                     <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
@@ -381,12 +381,12 @@ siyah
         <div class="pricing-table-3 business">
             <div class="pricing-table-header">
                 <h4><strong><?php echo $paket_adi_3 ?></strong></h4>
-                <p>Fazladan ARH kazanın!</p>
+                <p><?php echo $dil['fazladan-token-hediye'] ?></p>
             </div>
-            <div class="price"><strong><?php echo $token_degeri_3 ?></strong> ARH + % <?php echo $paket_kazanci_3 ?></div>
+            <div class="price"><strong><?php echo $token_degeri_3 ?></strong> <?php echo $birim ?> + % <?php echo $paket_kazanci_3 ?></div>
             <div class="pricing-body">
                 <ul class="pricing-table-ul">
-                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." fazladan ARH hediye!" ?></li>
+                    <li><i class="fa fa-donate"></i>  % <?php echo $paket_kazanci_3." ".$dil['fazladan-token-hediye'] ?></li>
                     <li><i class="fa fa-retweet"></i><?php echo $dil['istedigin-kadar-token-satin-al'] ?></li>
                     <li><i class="fa fa-envelope"></i><?php echo $dil['yedi-yirmidort-destek'] ?></li>
                     <li class="not-avail"><i class="fa fa-backspace"></i> <?php echo $dil['teknik-destek-iade-garantisi'] ?></li>
